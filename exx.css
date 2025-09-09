@@ -1,0 +1,300 @@
+/* ============================= */
+/* 1. Root Variables             */
+/* ============================= */
+:root {
+  --primary-color: #068A4F;
+  --secondary-color: #fff;
+  --bg-dark: #111;
+  --bg-light: #222;
+  --font-base: 'Montserrat', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* ============================= */
+/* 2. Global Styles              */
+/* ============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.6;
+  color: var(--secondary-color);
+  background-color: var(--bg-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+input, textarea {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+/* ============================= */
+/* 3. Navbar / Header            */
+/* ============================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(0.5rem, 2vw, 1.5rem) clamp(1rem, 5vw, 3rem);
+  flex-wrap: wrap;
+  background-color: var(--bg-dark);
+  position: relative;
+  z-index: 100;
+}
+
+.logo img {
+  width: clamp(120px, 15vw, 200px);
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 2rem);
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: clamp(12px, 1vw, 16px);
+  padding: clamp(0.2rem, 0.5vw, 0.5rem) clamp(0.5rem, 1vw, 1rem);
+  transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.hamburger {
+  display: none;
+  font-size: clamp(20px, 2.5vw, 28px);
+  background: none;
+  color: var(--secondary-color);
+}
+
+/* ============================= */
+/* 4. Hero / Main Sections       */
+/* ============================= */
+.iutp-text h1 {
+  font-size: clamp(24px, 5vw, 42px);
+  text-align: center;
+  padding: clamp(1rem, 4vw, 3rem);
+}
+
+.power-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(1rem, 3vw, 3rem);
+}
+
+.power-text h1 {
+  font-size: clamp(28px, 6vw, 42px);
+}
+
+.power-text p {
+  font-size: clamp(16px, 2.5vw, 20px);
+  max-width: clamp(300px, 70%, 800px);
+  text-align: center;
+  margin-top: clamp(1rem, 2vw, 2rem);
+}
+
+.impact-mater-text h2 {
+  font-size: clamp(20px, 4vw, 28px);
+  text-align: center;
+}
+
+.impact-mater-text p {
+  font-size: clamp(14px, 2.5vw, 16px);
+  text-align: center;
+  max-width: clamp(300px, 70%, 800px);
+  margin: clamp(1rem, 2vw, 2rem) auto;
+}
+
+.impact-mater-image img {
+  width: 100%;
+  height: clamp(200px, 50vh, 600px);
+  object-fit: cover;
+  margin-top: clamp(1rem, 2vw, 2rem);
+}
+
+/* ============================= */
+/* 5. Cards Section              */
+/* ============================= */
+.kot-card-main-heading h2,
+.living-card-main-heading h2,
+.kot-card-main-heading-c5 h2 {
+  font-size: clamp(18px, 3vw, 32px);
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+}
+
+.living-card-container,
+.kot-card-container,
+.kot-card-container-c5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.living-new-card-bg,
+.kot-new-card-bg,
+.kot-new-card-bg-c5 {
+  width: clamp(200px, 30vw, 350px);
+  height: auto;
+  background-color: var(--bg-light);
+  border-radius: clamp(8px, 1vw, 12px);
+  overflow: hidden;
+  transition: transform var(--transition-speed);
+}
+
+.living-new-card-bg:hover,
+.kot-new-card-bg:hover,
+.kot-new-card-bg-c5:hover {
+  transform: translateY(-5px);
+}
+
+/* ============================= */
+/* 6. Buttons / Forms             */
+/* ============================= */
+.btn-blue-human,
+.btn-white-human,
+.form-button {
+  width: clamp(140px, 25vw, 180px);
+  height: clamp(40px, 6vw, 50px);
+  font-size: clamp(13px, 1.2vw, 14px);
+  border-radius: clamp(5px, 1vw, 8px);
+  transition: all var(--transition-speed);
+}
+
+.btn-blue-human {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-blue-human:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+.btn-white-human {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: clamp(0.5rem, 1.5vw, 1rem);
+  font-size: clamp(14px, 1.5vw, 16px);
+  border-radius: clamp(5px, 1vw, 8px);
+  background-color: #222;
+  color: #fff;
+  margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+/* ============================= */
+/* 7. Images / People Section     */
+/* ============================= */
+.ccoc-people-img,
+.itr-ccoc-people-img,
+.power-ceo-img {
+  width: 100%;
+  height: clamp(200px, 50vh, 600px);
+  object-fit: cover;
+  border-radius: clamp(8px, 1vw, 12px);
+}
+
+/* ============================= */
+/* 8. Footer Section             */
+/* ============================= */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  gap: clamp(0.5rem, 2vw, 1rem);
+  background-color: #000;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1 1 100%;
+  margin-bottom: clamp(1rem, 2vw, 1rem);
+}
+
+/* ============================= */
+/* 9. Responsive Media Queries    */
+/* ============================= */
+
+/* Small Mobile */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .iutp-text h1,
+  .power-text h1,
+  .impact-mater-text h2 {
+    text-align: center;
+    padding-inline: clamp(1rem, 5vw, 2rem);
+  }
+  .impact-mater-text,
+  .power-text {
+    padding-inline: clamp(1rem, 4vw, 2rem);
+  }
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .nav-links {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+  .navbar {
+    align-items: center;
+  }
+}

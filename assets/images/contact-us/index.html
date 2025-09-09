@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact US</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    /* General Body Styling */
+   
+    /* Main section background */
+   
+        .main {
+            background-color: #1e1e1e;
+            padding: 10px 0;
+            margin-top: -60px;
+        }
+
+    /* Audit/Contact Section */
+    .Audit {
+      background-image: url('Crown.png');
+      
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 0px 20px;
+      margin-bottom: -40px;
+    }
+
+    .footer p {
+      margin-bottom: 0;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .social-icon {
+      margin-right: 8px;
+      font-size: 16px;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .footer .row>div {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .footer {
+        text-align: center;
+      }
+    }
+
+ 
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Main Container */
+        .main-container {
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-left {
+            padding-right: 50px;
+        }
+
+        .contact-title {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #3076BB;
+            margin-bottom: 0;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        .persona-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #3076BB;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+
+        .description {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .btn-email, .btn-chat {
+            padding: 12px 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-email {
+            background: linear-gradient(45deg, #3076BB, #4a8bc2);
+            color: white;
+            border-radius: 5px;
+        }
+
+        .btn-chat {
+            background: transparent;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .btn-email:hover {
+            background: linear-gradient(45deg, #4a8bc2, #3076BB);
+            transform: translateY(-2px);
+        }
+
+        .btn-chat:hover {
+           color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Form Container */
+        .form-container {
+            /* background: rgba(20, 20, 20, 0.9); */
+            /* border: 1px solid rgba(48, 118, 187, 0.3); */
+            border-radius: 15px;
+            padding: 0;
+            /* backdrop-filter: blur(10px); */
+            height: 650px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Form Header */
+        .form-header {
+            padding: 30px 40px 20px 40px;
+            /* border-bottom: 1px solid rgba(48, 118, 187, 0.2); */
+            /* background: rgba(48, 118, 187, 0.1); */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            
+        }
+       
+
+        .form-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 20px;
+            padding-left: 5px; 
+        }
+
+        .form-subtitle {
+            font-size: 0.9rem;
+            color: #ccc;
+            padding-left: 5px;
+            line-height: 1.4;
+        }
+
+        /* Scrollable Form Area */
+        .form-scrollable {
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px 45px;
+            position: relative;
+        }
+
+        /* Custom Scrollbar */
+        .form-scrollable::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .form-scrollable::-webkit-scrollbar-track {
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .form-scrollable::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .optional {
+            color: #888;
+            font-weight: 300;
+        }
+
+        .form-control, .form-select {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #555;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background: transparent;
+            box-shadow: none;
+            color: #fff;
+            outline: none;
+        }
+
+        .form-control::placeholder {
+            color: #888;
+        }
+
+        .form-select option {
+            background: #222;
+            color: #fff;
+        }
+
+        textarea.form-control {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        /* Submit Button */
+        .submit-container {
+            padding: 20px 150px;
+
+        }
+
+
+
+        /* footer  */
+
+        
+        .footer {
+            background-color: #1e1e1e;
+            color: white;
+            padding: 0px 20px;
+            /* reduced padding */
+            margin-bottom: -40px;
+            margin-top: 10px;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .social-icon {
+            margin-right: 8px;
+            font-size: 16px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .footer .row>div {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .footer {
+                text-align: center;
+            }
+        }
+
+        .btn-submit {
+ background: black;
+            color: white;
+            border: none;
+            padding: 12px 1px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(45deg, #4a8bc2, #3076BB);
+            transform: translateY(-2px);
+        }
+
+        /* File Upload Styling */
+        .file-upload-container {
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .file-upload-btn {
+            background: rgba(48, 118, 187, 0.2);
+            border: 1px solid #3076BB;
+            color: #3076BB;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-btn:hover {
+            background: rgba(48, 118, 187, 0.3);
+        }
+
+        .file-name {
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+
+
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+
+        .logo img {
+            height: 50px
+        }
+
+        /* Center links */
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            justify-content: center;
+            transition: max-height .3s ease;
+        }
+
+        .nav-links li {
+            list-style: none;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .nav-links li:hover>a {
+            color: #0af
+        }
+
+        .nav-links ul {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #111;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            min-width: 160px;
+            z-index: 10;
+        }
+
+        .nav-links li:hover>ul {
+            display: block
+        }
+
+        .nav-links ul li {
+            margin-bottom: 6px
+        }
+
+        .nav-links ul li:last-child {
+            margin-bottom: 0
+        }
+
+        .nav-links ul a:hover {
+            color: #0af
+        }
+
+        /* Right side */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-right button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-right img.flag {
+            width: 18px
+        }
+
+        /* Mega-menu */
+        .mega-menu {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            display: none;
+            width: 90%;
+            max-width: 1000px;
+            z-index: 1000;
+        }
+
+        .mega-menu.show {
+            display: block
+        }
+
+        .mega-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .mega-col {
+            flex: 1 1 150px;
+        }
+
+        .mega-col h4 {
+            margin-bottom: 8px;
+            font-size: 16px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+        }
+
+        .mega-col ul {
+            list-style: none
+        }
+
+        .mega-col li {
+            margin-bottom: 6px
+        }
+
+        .mega-col a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .mega-col a:hover {
+            color: #0af
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            font-size: 22px;
+            background: none;
+            border: none;
+            color: #fff;
+        }
+
+        /* MOBILE */
+        @media(max-width:992px) {
+            .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #000;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .nav-links.show {
+                max-height: 500px;
+            }
+
+            .nav-links li {
+                width: 100%
+            }
+
+            .nav-links ul {
+                position: static;
+                box-shadow: none;
+                background: #111;
+                margin-left: 10px;
+            }
+
+            .mega-menu {
+                position: static;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .mega-content {
+                flex-direction: column;
+            }
+
+            .mega-col {
+                flex: 1 1 100%
+            }
+
+            .hamburger {
+                display: block
+            }
+        }
+
+
+
+        
+.marqueeajust{
+    height: 100% !important;
+    width: 100%;
+    margin-left: -11%;
+}
+.marqueeajustright{
+    height: 100% !important;
+    width: 100%;
+        margin-left: 13%;
+}
+/* marquee section css */
+.marquee-wrapper
+{
+  width: 1140px;
+  transform: translateY(-10px);
+  margin-left: 7.5%;
+}
+.marquee-text{
+    color: white;
+}
+.marquee-text-container {
+ 
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.marquee-text-track {
+  display: flex;
+  animation: scroll-loop 20s linear infinite;
+}
+
+.marquee-text {
+  flex-shrink: 0;
+  color: white;
+  padding-right: 100px; /* Space between repetitions */
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+  </style>
+</head>
+
+<body>
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="KOT Logo" style="height: 50px;">
+        </div>
+
+        <!-- Center nav -->
+        <ul class="nav-links" id="navLinks" style="padding-top: 12px;">
+            <li>
+                <a href="#">Corporate <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Leadership</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Careers <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Internships</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Web & App Dev</a></li>
+                    <li><a href="#">SEO & Marketing</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Consultancy <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Strategy</a></li>
+                    <li><a href="#">Legal & Compliance</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Marketplace <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">SaaS Tools</a></li>
+                    <li><a href="#">E-commerce</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Programs <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Xcelerator</a></li>
+                    <li><a href="#">Merchanity</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Right icons -->
+        <div class="nav-right">
+            <button><img src="https://www.worldometers.info/img/flags/uk-flag.gif" class="flag" alt=""> English</button>
+            <button><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button><i class="fas fa-user"></i> Sign In</button>
+            <button onclick="toggleMega()"><i class="fas fa-crown"></i></button>
+            <button class="hamburger" onclick="toggleNav()"><i class="fas fa-th"></i></button>
+        </div>
+
+        <!-- Mega menu -->
+        <div class="mega-menu" id="megaMenu">
+            <div class="mega-content">
+                <!-- Column 1 -->
+                <div class="mega-col">
+                    <h4>App Sculpt</h4>
+                    <ul>
+                        <li><a href="#">Native Mobile App (Android)</a></li>
+                        <li><a href="#">Native Mobile App (iOS)</a></li>
+                        <li><a href="#">Flutter App Development</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div class="mega-col">
+                    <h4>App Sculpt</h4>
+                    <ul>
+                        <li><a href="#">Software as a Service</a></li>
+                        <li><a href="#">Point of Sales</a></li>
+                        <li><a href="#">Ecommerce Platforms</a></li>
+                        <li><a href="#">Healthcare Systems</a></li>
+                        <li><a href="#">LMS & ERP Systems</a></li>
+                        <li><a href="#">Inventory & HRM Systems</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div class="mega-col">
+                    <h4>Digittrail</h4>
+                    <ul>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Content Marketing</a></li>
+                        <li><a href="#">PPC Marketing</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Branding & Audit</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div class="mega-col">
+                    <h4>Graphiora</h4>
+                    <ul>
+                        <li><a href="#">Logo & Brand Identity</a></li>
+                        <li><a href="#">Print & Digital Design</a></li>
+                        <li><a href="#">Web & UI/UX Design</a></li>
+                        <li><a href="#">Packaging Design</a></li>
+                    </ul>
+                </div>
+                <!-- Column 5 -->
+                <div class="mega-col">
+                    <h4>Web Sculptures</h4>
+                    <ul>
+                        <li><a href="#">Custom Website Dev</a></li>
+                        <li><a href="#">Front & Backend Dev</a></li>
+                        <li><a href="#">API Integration</a></li>
+                        <li><a href="#">Maintenance & Support</a></li>
+                        <li><a href="#">Market Research</a></li>
+                    </ul>
+                </div>
+                <!-- Column 6 -->
+                <div class="mega-col">
+                    <h4>Venture Xcelerator</h4>
+                    <ul>
+                        <li><a href="#">Mentorship & Coaching</a></li>
+                        <li><a href="#">Business Strategy</a></li>
+                        <li><a href="#">Networking & Partnerships</a></li>
+                        <li><a href="#">Funding & Investment</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+
+
+       <!-- Marquee Section with Side Images on Left & Right -->
+<div class="marquee-wrapper  position-relative d-flex align-items-center overflow-hidden" 
+style="height: 45px;">
+  
+  <!-- Left Image -->
+  <div class="position-absolute start-0 top-0 bottom-0 z-2 d-flex align-items-center ">
+    <img src="rightmarquee.png" alt="Left" class="marqueeajust" />
+  </div>
+
+  <!-- Scrolling Text -->
+    <div class="marquee-text-container flex-grow-1 px-5">
+    <div class="marquee-text-track">
+        <div class="marquee-text fw-bold">
+        <span>
+            <img src="marqueetextlogo.png" alt="">
+        </span>
+        KOT Enterprises priorities cultural values and well being of work spaces. Therefore staff will be visiting Siran Valley.
+        </div>
+        <div class="marquee-text fw-bold">
+        <span>
+            <img src="marqueetextlogo.png" alt="">
+        </span>
+        KOT Enterprises priorities cultural values and well being of work spaces. Therefore staff will be visiting Siran Valley.
+        </div>
+    </div>
+    </div>
+
+
+
+  <!-- Right Image -->
+  <div class="position-absolute end-0 top-0 bottom-0 z-2 d-flex align-items-center ">
+    <img src="leftmarquee .png" alt="Right" class="marqueeajustright" style="margin-right: 11%;"/>
+  </div>
+
+</div>
+
+    <div class="container-fluid main"> </div>
+  
+  <!-- Main Content -->
+  <div class="container-fluid main">
+    <!-- Contact Section -->
+    <div class="container-fluid Audit">
+        <div class="geometric-bg"></div>
+    
+    <div class="main-container">
+        <div class="container-fluid content-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-7 col-md-6 content-left">
+                        <h1 class="contact-title">Contact Us</h1>
+                        <p class="subtitle">that tells</p>
+                        <h2 class="persona-title">YOUR PERSONA</h2>
+                        <p class="description">
+                            At KOT Enterprises, we create more than just visuals; we craft meaningful experiences that connect with people. Our solutions speak your brand's language, leaving lasting impressions and delivering real impact.
+                        </p>
+                        <div class="action-buttons">
+                            <button class="btn-email" style="background-image: url(buttonframe.png); background-size: 100% 100%;">
+                                Email Us
+                            </button>
+                            <button class="btn-chat" style="background-image: url(Subtract\ \(5\).png); background-size: 100% 100%; color: #000;">
+                                Live Chat
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Form -->
+                    <div class="col-lg-5 col-md-6">
+                        <div class="form-container" style="background-image: url(Subtract\ \(6\).png); background-size: 100% 100%;">
+                            <!-- Form Header -->
+                            <div class="form-header">
+                                <div class="logo">
+                                   <img src="Logo (1).png" alt="" width="200px">
+                                    <!-- <i class="fas fa-crown"></i> -->
+                                    <!-- <span class="logo-text">KOT ENTERPRISES</span> -->
+                                </div>
+                                <h3 class="form-title">Book a Free Consultation Today</h3>
+                                <p class="form-subtitle">We'd love to hear your ideas. Whether you're starting from scratch or need a fresh perspective, we're here to help.</p>
+                            </div>
+                            
+                            <!-- Scrollable Form Area -->
+                            <div class="form-scrollable">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="form-label">Full Name:</label>
+                                        <input type="text" class="form-control" placeholder="Enter your full name" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Organization/Company: <span class="optional">(optional)</span></label>
+                                        <input type="text" class="form-control" placeholder="Company name">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Email Address:</label>
+                                        <input type="email" class="form-control" placeholder="name@example.com" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number: <span class="optional">(optional)</span></label>
+                                        <input type="tel" class="form-control" placeholder="03XX-XXXXXXX">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Purpose of Contact:</label>
+                                        <select class="form-select" required>
+                                            <option value="">Select One</option>
+                                            <option value="general">General Inquiry</option>
+                                            <option value="support">Support</option>
+                                            <option value="collaboration">Collaboration</option>
+                                            <option value="career">Career/Job</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Which Services or Department is This About?</label>
+                                        <select class="form-select" required>
+                                            <option value="">(Select One)</option>
+                                            <option value="web">Web Development</option>
+                                            <option value="design">UI/UX Design</option>
+                                            <option value="marketing">Digital Marketing</option>
+                                            <option value="sales">Sales Department</option>
+                                            <option value="support">Customer Support</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Your Message:</label>
+                                        <textarea class="form-control" placeholder="Let us know what you'd like to discuss or ask about" rows="4" required></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Upload File / Attachment <span class="optional">(optional)</span>:</label>
+                                        <input type="text" class="form-control" placeholder="Attach file..." readonly>
+                                        <div class="file-upload-container">
+                                            <button type="button" class="file-upload-btn" onclick="document.getElementById('fileUpload').click()">
+                                                <i class="fas fa-upload me-1"></i>Upload File
+                                            </button>
+                                            <input type="file" id="fileUpload" style="display: none;" onchange="showFileName(this)">
+                                            <div class="file-name" id="fileName"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Budget Range: <span class="optional">(optional)</span></label>
+                                        <select class="form-select">
+                                            <option value="">Select Range</option>
+                                            <option value="under-5k">Under $5,000</option>
+                                            <option value="5k-15k">$5,000 - $15,000</option>
+                                            <option value="15k-50k">$15,000 - $50,000</option>
+                                            <option value="50k-plus">$50,000+</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Project Timeline:</label>
+                                        <select class="form-select">
+                                            <option value="">Select Timeline</option>
+                                            <option value="asap">ASAP</option>
+                                            <option value="1-month">Within 1 Month</option>
+                                            <option value="3-months">Within 3 Months</option>
+                                            <option value="6-months">Within 6 Months</option>
+                                            <option value="flexible">Flexible</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">How did you hear about us?</label>
+                                        <select class="form-select">
+                                            <option value="">Select Option</option>
+                                            <option value="google">Google Search</option>
+                                            <option value="social">Social Media</option>
+                                            <option value="referral">Referral</option>
+                                            <option value="advertisement">Advertisement</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div class="submit-container" >
+                                <button type="submit" class="btn-submit" style="background-image: url(buttonframe.png); background-size: 100% 100%;">
+                                   Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+    
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col-md-4 col-12">
+                    <p>
+                        This website is authorized for office use externally or internally marked or addressed
+                        medium copying or posting is an infringement. This website may not be addressed or otherwise
+                        reproduced, posted or transmitted, without the permission of the Chief Executive Officer at
+                        KOT ENTERPRISES (PRIVATE) LIMITED.
+                    </p>
+                </div>
+                <div class="col-md-4 col-12 d-flex align-items-center justify-content-center">
+                    <p>&copy; 2019 KOT Enterprises. All rights reserved.</p>
+                </div>
+                <div class="col-md-4 col-12 d-flex align-items-center justify-content-md-end justify-content-center">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                    <i class="fab fa-instagram social-icon"></i>
+                    <i class="fab fa-twitter social-icon"></i>
+                    <i class="fab fa-linkedin-in social-icon"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+            <script>
+            function toggleNav() {
+                document.getElementById('navLinks').classList.toggle('show');
+            }
+            function toggleMega() {
+                document.getElementById('megaMenu').classList.toggle('show');
+            }
+        </script>
+</body>
+
+</html>

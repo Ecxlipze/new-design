@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board of Directors</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat, sans-serif;
+            background-color: black;
+        }
+
+        /* Main Container */
+        
+        .main {
+            background-color: #1e1e1e;
+            padding: 10px 0;
+            margin-top: -60px;
+        }
+
+
+
+        /* Background Sections */
+        .board-of-directors,
+        .core-values-section,
+        .our-impact {
+            background-image: url('Crown.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            min-height: 100vh;
+            margin-bottom: 20px;
+        }
+
+        .board-of-directors,
+        .our-impact {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Board of Directors Section */
+        .board-of-directors h1 {
+            color: #0C72BA;
+            font-weight: 900;
+            font-size: 52px;
+        }
+
+        .board-of-directors p {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 1.6;
+        }
+
+        /* Core Values Section */
+        .core-values-section {
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+
+        .heading-over-images {
+            color: #0c72ba;
+            margin-bottom: 10px;
+            font-weight: 800;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .core-value-box {
+            width:323px;
+            height: 379px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .core-value-box.bg-1 {
+            background-image: url('1.png');
+        }
+
+        .core-value-box.bg-2 {
+            background-image: url('2.png');
+        }
+
+        .core-value-box.bg-3 {
+            background-image: url('3.png');
+        }
+
+        .core-value-box.bg-4 {
+            background-image: url('4.png');
+        }
+
+        .core-value-text {
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffffff;
+            padding: 0 25px;
+        }
+
+        .core-value-text.margin-top {
+            margin-top: 100px;
+        }
+
+        .core-value-title {
+            color: #0c72ba;
+            font-size: 25px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        /* Our Impact Section */
+        .our-impact h2 {
+            color: #0C72BA;
+            font-weight: 800;
+            font-size: 28px;
+           
+        }
+        .our-impact p {
+            font-weight: 400;
+            font-size: 22px;
+        }
+
+        .signature-block {
+            text-align: end;
+            padding: 10px;
+        }
+
+        .signature-block p {
+            padding: 0 10px;
+            font-weight: 500;
+        }
+
+        .signature-block span {
+            display: block;
+        }
+
+        .signature-block .bold {
+            font-weight: 700;
+        }
+
+        .signature-block .highlight {
+            color: #0C72BA;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .board-of-directors h1 {
+                font-size: 2rem;
+            }
+
+            .board-of-directors p {
+                font-size: 1rem;
+            }
+
+            .heading-over-images {
+                font-size: 2rem;
+            }
+
+            .core-value-box {
+                height: auto;
+                padding: 30px 20px;
+            }
+
+            .core-value-text {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            .our-impact h2,
+            .our-impact p {
+                width: auto;
+                font-size: 18px;
+            }
+
+            .our-impact p {
+                font-size: 12px;
+            }
+
+            .footer .row>div {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .footer {
+                text-align: center;
+            }
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #1e1e1e;
+            color: white;
+            padding: 0px 20px;
+            margin-bottom: -40px;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .social-icon {
+            margin-right: 8px;
+            font-size: 16px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #ccc;
+        }
+
+
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+
+        .logo img {
+            height: 50px
+        }
+
+        /* Center links */
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            justify-content: center;
+            transition: max-height .3s ease;
+        }
+
+        .nav-links li {
+            list-style: none;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .nav-links li:hover>a {
+            color: #0af
+        }
+
+        .nav-links ul {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #111;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            min-width: 160px;
+            z-index: 10;
+        }
+
+        .nav-links li:hover>ul {
+            display: block
+        }
+
+        .nav-links ul li {
+            margin-bottom: 6px
+        }
+
+        .nav-links ul li:last-child {
+            margin-bottom: 0
+        }
+
+        .nav-links ul a:hover {
+            color: #0af
+        }
+
+        /* Right side */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-right button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-right img.flag {
+            width: 18px
+        }
+
+        /* Mega-menu */
+        .mega-menu {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            display: none;
+            width: 90%;
+            max-width: 1000px;
+            z-index: 1000;
+        }
+
+        .mega-menu.show {
+            display: block
+        }
+
+        .mega-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .mega-col {
+            flex: 1 1 150px;
+        }
+
+        .mega-col h4 {
+            margin-bottom: 8px;
+            font-size: 16px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+        }
+
+        .mega-col ul {
+            list-style: none
+        }
+
+        .mega-col li {
+            margin-bottom: 6px
+        }
+
+        .mega-col a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .mega-col a:hover {
+            color: #0af
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            font-size: 22px;
+            background: none;
+            border: none;
+            color: #fff;
+        }
+
+        /* MOBILE */
+        @media(max-width:992px) {
+            .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #000;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .nav-links.show {
+                max-height: 500px;
+            }
+
+            .nav-links li {
+                width: 100%
+            }
+
+            .nav-links ul {
+                position: static;
+                box-shadow: none;
+                background: #111;
+                margin-left: 10px;
+            }
+
+            .mega-menu {
+                position: static;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .mega-content {
+                flex-direction: column;
+            }
+
+            .mega-col {
+                flex: 1 1 100%
+            }
+
+            .hamburger {
+                display: block
+            }
+        }
+
+
+
+        
+.marqueeajust{
+    height: 100% !important;
+    width: 100%;
+    margin-left: -11%;
+}
+.marqueeajustright{
+    height: 100% !important;
+    width: 100%;
+        margin-left: 13%;
+}
+/* marquee section css */
+.marquee-wrapper
+{
+  width: 1140px;
+  transform: translateY(-10px);
+  margin-left: 7.5%;
+}
+.marquee-text{
+    color: white;
+}
+.marquee-text-container {
+ 
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.marquee-text-track {
+  display: flex;
+  animation: scroll-loop 20s linear infinite;
+}
+
+.marquee-text {
+  flex-shrink: 0;
+  color: white;
+  padding-right: 100px; /* Space between repetitions */
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+    </style>
+</head>
+
+<body>
+        <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="KOT Logo" style="height: 50px;">
+        </div>
+
+        <!-- Center nav -->
+        <ul class="nav-links" id="navLinks" style="padding-top: 12px;">
+            <li>
+                <a href="#">Corporate <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Leadership</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Careers <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Internships</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Web & App Dev</a></li>
+                    <li><a href="#">SEO & Marketing</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Consultancy <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Strategy</a></li>
+                    <li><a href="#">Legal & Compliance</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Marketplace <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">SaaS Tools</a></li>
+                    <li><a href="#">E-commerce</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Programs <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Xcelerator</a></li>
+                    <li><a href="#">Merchanity</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Right icons -->
+        <div class="nav-right">
+            <button><img src="https://www.worldometers.info/img/flags/uk-flag.gif" class="flag" alt=""> English</button>
+            <button><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button><i class="fas fa-user"></i> Sign In</button>
+            <button onclick="toggleMega()"><i class="fas fa-crown"></i></button>
+            <button class="hamburger" onclick="toggleNav()"><i class="fas fa-th"></i></button>
+        </div>
+
+        <!-- Mega menu -->
+        <div class="mega-menu" id="megaMenu">
+            <div class="mega-content">
+                <!-- Column 1 -->
+                <div class="mega-col">
+                    <h4>App Sculpt</h4>
+                    <ul>
+                        <li><a href="#">Native Mobile App (Android)</a></li>
+                        <li><a href="#">Native Mobile App (iOS)</a></li>
+                        <li><a href="#">Flutter App Development</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div class="mega-col">
+                    <h4>App Sculpt</h4>
+                    <ul>
+                        <li><a href="#">Software as a Service</a></li>
+                        <li><a href="#">Point of Sales</a></li>
+                        <li><a href="#">Ecommerce Platforms</a></li>
+                        <li><a href="#">Healthcare Systems</a></li>
+                        <li><a href="#">LMS & ERP Systems</a></li>
+                        <li><a href="#">Inventory & HRM Systems</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div class="mega-col">
+                    <h4>Digittrail</h4>
+                    <ul>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Content Marketing</a></li>
+                        <li><a href="#">PPC Marketing</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Branding & Audit</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div class="mega-col">
+                    <h4>Graphiora</h4>
+                    <ul>
+                        <li><a href="#">Logo & Brand Identity</a></li>
+                        <li><a href="#">Print & Digital Design</a></li>
+                        <li><a href="#">Web & UI/UX Design</a></li>
+                        <li><a href="#">Packaging Design</a></li>
+                    </ul>
+                </div>
+                <!-- Column 5 -->
+                <div class="mega-col">
+                    <h4>Web Sculptures</h4>
+                    <ul>
+                        <li><a href="#">Custom Website Dev</a></li>
+                        <li><a href="#">Front & Backend Dev</a></li>
+                        <li><a href="#">API Integration</a></li>
+                        <li><a href="#">Maintenance & Support</a></li>
+                        <li><a href="#">Market Research</a></li>
+                    </ul>
+                </div>
+                <!-- Column 6 -->
+                <div class="mega-col">
+                    <h4>Venture Xcelerator</h4>
+                    <ul>
+                        <li><a href="#">Mentorship & Coaching</a></li>
+                        <li><a href="#">Business Strategy</a></li>
+                        <li><a href="#">Networking & Partnerships</a></li>
+                        <li><a href="#">Funding & Investment</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+
+
+       <!-- Marquee Section with Side Images on Left & Right -->
+<div class="marquee-wrapper  position-relative d-flex align-items-center overflow-hidden" 
+style="height: 45px;">
+  
+  <!-- Left Image -->
+  <div class="position-absolute start-0 top-0 bottom-0 z-2 d-flex align-items-center ">
+    <img src="rightmarquee.png" alt="Left" class="marqueeajust" />
+  </div>
+
+  <!-- Scrolling Text -->
+    <div class="marquee-text-container flex-grow-1 px-5">
+    <div class="marquee-text-track">
+        <div class="marquee-text fw-bold">
+        <span>
+            <img src="marqueetextlogo.png" alt="">
+        </span>
+        KOT Enterprises priorities cultural values and well being of work spaces. Therefore staff will be visiting Siran Valley.
+        </div>
+        <div class="marquee-text fw-bold">
+        <span>
+            <img src="marqueetextlogo.png" alt="">
+        </span>
+        KOT Enterprises priorities cultural values and well being of work spaces. Therefore staff will be visiting Siran Valley.
+        </div>
+    </div>
+    </div>
+
+
+
+  <!-- Right Image -->
+  <div class="position-absolute end-0 top-0 bottom-0 z-2 d-flex align-items-center ">
+    <img src="leftmarquee .png" alt="Right" class="marqueeajustright" style="margin-right: 11%;"/>
+  </div>
+
+</div>
+
+    <div class="container-fluid main"> </div>
+
+    <div class="container-fluid main">
+        <!-- Board of Directors Section -->
+        <div class="container-fluid board-of-directors">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 col-sm-12">
+                        <h1 class="mb-4 mt-5">
+                            A Message from Our <br />Board of Directors
+                        </h1>
+                        <p>
+                            At KOT Enterprises, we believe in building a technology driven <br>
+                            future that is easily accessible globally. As your Board of <br>
+                            Directors, we consider it both our main responsibility and a<br>
+                            great privilege to guide this vision. Our commitment to our <br>
+                            clients ensures that our mission, our company culture, and the <br>
+                            services we offer continuously grow and adapt to meet <br>
+                            the evolving needs of our customers and partners worldwide.
+                        </p>
+                        <img src="Group 2079 (1).png" alt="KOT Graphic" class="img-fluid mt-4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Values Section -->
+        <div class="container-fluid core-values-section">
+            <div class="container text-center">
+                <h1 class="fw-bold heading-over-images">We are deeply committed to</h1>
+                <div class="row justify-content-center g-4 mt-4">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="core-value-box bg-1">
+                            <p class="core-value-text margin-top">
+                                Delivering excellence through groundbreaking digital solutions across software
+                                development, expert consultancy, professional certification, entrepreneurial support,
+                                and dedicated customer care.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="core-value-box bg-2">
+                            <p class="core-value-text margin-top">
+                                Upholding integrity and transparency in every single interaction and partnership we
+                                forge.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="core-value-box bg-3">
+                            <p class="core-value-text margin-top">
+                                Investing in people, our cherished clients, our dedicated teams, and the broader
+                                community to create lasting value and a significant yet positive impact for all.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="core-value-box bg-4">
+                            <p class="core-value-text margin-top">
+                                Fostering global connections through key initiatives like our Careers Portal, our
+                                Certification Platform, and the Global Entrepreneurial Ecosystem (GEE).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Impact Section -->
+        <div class="container-fluid our-impact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p>
+                            Looking ahead, we aim to remain your most trusted partner. We promise to listen carefully to
+                            your needs, adapt with agility to new challenges, and consistently exceed your expectations.
+                            Whether you are a customer, a valued collaborator, an investor, or a member of our team,
+                            your success will always be our foremost priority.
+                        </p>
+                        <p>Together, let’s build a future that is both secure and reliable.</p>
+
+                        <!-- Signature Block -->
+                        <div class="signature-block">
+                            <p>
+                                Warm Regards,<br>
+                                    <span class="bold">The Board of Directors</span>
+                                <span class="highlight">KOT Enterprises</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-md-4 col-12">
+                        <p>
+                            This website is authorized for office use externally or internally marked or addressed
+                            medium copying or posting is an infringement. This website may not be addressed or otherwise
+                            reproduced, posted or transmitted, without the permission of the Chief Executive Officer at
+                            KOT ENTERPRISES (PRIVATE) LIMITED.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-12 d-flex align-items-center justify-content-center">
+                        <p>&copy; 2019 KOT Enterprises. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-4 col-12 d-flex align-items-center justify-content-md-end justify-content-center">
+                        <i class="fab fa-facebook-f social-icon"></i>
+                        <i class="fab fa-instagram social-icon"></i>
+                        <i class="fab fa-twitter social-icon"></i>
+                        <i class="fab fa-linkedin-in social-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+                <script>
+            function toggleNav() {
+                document.getElementById('navLinks').classList.toggle('show');
+            }
+            function toggleMega() {
+                document.getElementById('megaMenu').classList.toggle('show');
+            }
+        </script>
+    </div>
+</body>
+
+</html>

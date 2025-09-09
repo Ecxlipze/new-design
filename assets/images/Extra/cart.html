@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact US</title>
+
+  <!-- Bootstrap & Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Internal CSS -->
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Main Background */
+    .main {
+      background: #1e1e1e;
+      padding: 50px 0;
+    }
+
+    /* Audit (Cart Section) Background */
+    .Audit {
+      background-image: url('Crown.png');
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    /* Cart Section Heading */
+    .cart-heading {
+      margin: 50px 600px;
+      color: #0863A2;
+      font-weight: 800;
+    }
+
+    /* Sign In Button */
+    .sign-in-btn {
+      width: 9%;
+      margin-left: 46%;
+      background-image: url('buttonframe.png');
+      background-size: 100% 100%;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* Card Styling */
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-primary {
+      border-radius: 0.5rem;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 5px 20px;
+      margin-top: -40px;
+    }
+
+    .footer p {
+      margin-bottom: 0;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .social-icon {
+      margin-right: 8px;
+      font-size: 16px;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #ccc;
+    }
+
+    /* Responsive Footer */
+    @media (max-width: 768px) {
+      .footer .row>div {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .footer {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Main Container -->
+  <div class="container-fluid main">
+
+    <!-- Cart Section -->
+    <div class="container-fluid Audit">
+      <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="text-center">
+          <h2 class="mb-5 cart-heading">Cart</h2>
+          <hr class="mb-4">
+          <h4 class="mb-2">Your cart is empty</h4>
+          <p class="mb-4 text-muted">Sign in to see if you have saved any items</p>
+          <div class="d-grid mb-1">
+            <button type="submit" class="btn sign-in-btn">Sign In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Cart Section -->
+
+  </div>
+  <!-- End Main Container -->
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+
+        <!-- Left Footer Column -->
+        <div class="col-md-4 col-12">
+          <p>
+            This website is authorized for office use externally or internally marked or addressed medium.
+            Copying or posting is an infringement. This website may not be reproduced, posted or transmitted
+            without the permission of the Chief Executive Officer at KOT ENTERPRISES (PRIVATE) LIMITED.
+          </p>
+        </div>
+
+        <!-- Center Footer Column -->
+         <div class="col-md-4 col-12 d-flex align-items-center justify-content-center">
+          <p>&copy; 2019 KOT Enterprises. All rights reserved.</p>
+        </div>
+
+        <!-- Right Footer Column -->
+        <div class="col-md-4 col-12 d-flex align-items-center justify-content-md-end justify-content-center">
+          <i class="fab fa-facebook-f social-icon"></i>
+          <i class="fab fa-instagram social-icon"></i>
+          <i class="fab fa-twitter social-icon"></i>
+          <i class="fab fa-linkedin-in social-icon"></i>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+</body>
+
+</html>

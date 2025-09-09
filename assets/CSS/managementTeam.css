@@ -1,0 +1,513 @@
+     body {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat, sans-serif;
+            background-color: #000000;
+        }
+        .main {
+            background-color: #1e1e1e;
+            padding: 10px 0;
+            margin-top: -60px;
+        }
+
+      
+
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+
+        .logo img {
+            height: 50px
+        }
+
+        /* Center links */
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            justify-content: center;
+            transition: max-height .3s ease;
+        }
+
+        .nav-links li {
+            list-style: none;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .nav-links li:hover>a {
+            color: #0af
+        }
+
+        .nav-links ul {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #111;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            min-width: 160px;
+            z-index: 10;
+        }
+
+        .nav-links li:hover>ul {
+            display: block
+        }
+
+        .nav-links ul li {
+            margin-bottom: 6px
+        }
+
+        .nav-links ul li:last-child {
+            margin-bottom: 0
+        }
+
+        .nav-links ul a:hover {
+            color: #0af
+        }
+
+        /* Right side */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-right button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-right img.flag {
+            width: 18px
+        }
+
+        /* Mega-menu */
+        .mega-menu {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            display: none;
+            width: 90%;
+            max-width: 1000px;
+            z-index: 1000;
+        }
+
+        .mega-menu.show {
+            display: block
+        }
+
+        .mega-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .mega-col {
+            flex: 1 1 150px;
+        }
+
+        .mega-col h4 {
+            margin-bottom: 8px;
+            font-size: 16px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+        }
+
+        .mega-col ul {
+            list-style: none
+        }
+
+        .mega-col li {
+            margin-bottom: 6px
+        }
+
+        .mega-col a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .mega-col a:hover {
+            color: #0af
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            font-size: 22px;
+            background: none;
+            border: none;
+            color: #fff;
+        }
+
+        /* MOBILE */
+        @media(max-width:992px) {
+            .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #000;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .nav-links.show {
+                max-height: 500px;
+            }
+
+            .nav-links li {
+                width: 100%
+            }
+
+            .nav-links ul {
+                position: static;
+                box-shadow: none;
+                background: #111;
+                margin-left: 10px;
+            }
+
+            .mega-menu {
+                position: static;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .mega-content {
+                flex-direction: column;
+            }
+
+            .mega-col {
+                flex: 1 1 100%
+            }
+
+            .hamburger {
+                display: block
+            }
+        }
+
+
+
+        .marqueeajust{
+    height: 100% !important;
+    width: 100%;
+    margin-left: -11%;
+}
+.marqueeajustright{
+    height: 100% !important;
+    width: 100%;
+        margin-left: 13%;
+}
+/* marquee section css */
+.marquee-wrapper
+{
+  width: 80%;
+  transform: translateY(-10px);
+  margin-left: 7.5%;
+}
+.marquee-text{
+    color: white;
+}
+.marquee-text-container {
+ 
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.marquee-text-track {
+  display: flex;
+  animation: scroll-loop 20s linear infinite;
+}
+
+.marquee-text {
+  flex-shrink: 0;
+  color: white;
+  padding-right: 100px; /* Space between repetitions */
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+  
+
+  /* end of marquee */
+/* management-team-work */
+.management-text{
+    background-image: url(../images/management/management-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    
+   
+}
+.management-main-heading h1{
+    font-family: Montserrat;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 52px;
+
+line-height: 112%;
+
+color: #0C72BA;
+}
+
+.management-main-heading p{
+    font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: 22px;
+leading-trim: NONE;
+line-height: 112%;
+color: #FFFFFF;
+
+}
+.management-btn{
+    background-image: url(../images/management/btn-fram.png);
+    background-size: 100% 100%;
+    width: 190px;
+height: 55px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+margin-top: 3%;
+}
+
+.management-btn span{
+    display: flex;
+    justify-content: center;
+align-items: center;
+font-family: Montserrat;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 14px;
+
+line-height: 100%;
+
+color: #FFFFFF;
+
+}
+
+
+
+
+
+
+/* our team card */
+.otm-main-container {
+  background-image: url(../images/management/main-card-bg.png);
+  background-size: 100% 100%;
+  /* height: 250vh; */
+  padding-top: 30px;
+  padding-bottom: 5%;
+}
+
+/* First and second div container styles */
+.otm-first-div {
+  display: flex;
+  gap: 50px;
+  margin-left: 41%;
+  justify-content: center;
+  /* Remove below margin if needed */
+}
+
+.otm-second-div {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 4%;}
+
+/* New wrapper to group card + text */
+.otm-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 325px; /* same width as card */
+  gap: 15px;
+}
+
+/* Cards common styles */
+.otm-card {
+  width: 324.92px;
+  height: 347px;
+  background-size: 100% 100%;
+ 
+  background-repeat: no-repeat;
+
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  position: relative;
+ 
+}
+
+/* Optional: overlay to make text readable */
+.otm-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  border-radius: 12px;
+  z-index: 0;
+}
+
+/* Text inside card should be above overlay */
+.otm-card-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+/* Specific background images for each card */
+.otm-card1 { background-image: url('../images/management/management-frame.png'); }
+.otm-card2 { background-image: url('../images/management/management-frame.png'); }
+.otm-card3 { background-image: url('../images/management/management-frame.png'); }
+.otm-card4 { background-image: url('../images/management/management-frame.png'); }
+.otm-card5 { background-image: url('../images/management/management-frame.png'); }
+
+/* Text styles */
+.otm-card-text h5 {
+  margin: 0;
+ font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: 17px;
+
+line-height: 112%;
+
+
+  color:#FFFFFF;
+}
+
+.otm-card-text h2 {
+  /* margin: 5px 0 0; */
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 27px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+
+  color:#0C72BA;
+}
+
+/* Responsive: stack cards on small screens */
+@media(max-width: 767px) {
+  .otm-first-div, .otm-second-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .otm-main-container {
+    height: 250vh;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* footer styling */
+
+        .footer {
+            background-color: #1e1e1e;
+            color: white;
+            padding: 5px 20px 10px 20px;
+            /* reduced padding */
+            margin-top: -10px;
+            margin-bottom: 0px;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .social-icon {
+            margin-right: 8px;
+            font-size: 16px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .footer .row>div {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .footer {
+                text-align: center;
+            }
+        }
+
+

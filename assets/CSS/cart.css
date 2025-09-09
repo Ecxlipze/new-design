@@ -1,0 +1,132 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background-color: #1e1e1e;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Main Section */
+.main {
+  padding: 20px 0;
+}
+
+/* Audit (Cart Section) Background */
+.Audit {
+  background: url('../images/Extra/crown.png') center/cover no-repeat;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Cart Section Heading */
+.cart-heading {
+  color: #0863A2;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Sign In Button */
+.sign-in-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 20px auto;
+  background: url('../images/Extra/buttonframe.png') center/cover no-repeat;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Social Icons */
+.social-icon {
+  margin: 0 6px;
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ccc;
+}
+
+/* Marquee Section */
+.marquee-wrapper {
+  max-width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.marquee-text-container {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee-text-track {
+  display: flex;
+  animation: scroll-loop 20s linear infinite;
+}
+
+.marquee-text {
+  flex-shrink: 0;
+  color: white;
+  padding-right: 80px;
+  font-size: 1rem;
+}
+
+@keyframes scroll-loop {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cart-heading {
+    font-size: 1.5rem;
+  }
+
+  .sign-in-btn {
+    width: auto;
+    padding: 10px 20px;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+
+  .marquee-text {
+    font-size: 0.9rem;
+    padding-right: 40px;
+  }
+}

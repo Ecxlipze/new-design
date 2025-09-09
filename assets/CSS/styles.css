@@ -1,0 +1,2183 @@
+
+/* header css start here */
+  body {
+  font-family: 'Montserrat' !important;
+
+  /* background-color: #000; */
+  color: #fff;
+  background-color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+}
+/* header css start here */
+ .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 40px;
+        padding-bottom: 0%;
+        background: #000;
+        color: #fff;
+        position: relative;
+      }
+
+      .logo img {
+            height: 60px;
+    width: 180px;
+      }
+
+      /* Center links */
+      .nav-links {
+        display: flex;
+        gap: 7px;
+        flex: 1;
+        justify-content: center;
+        transition: max-height .3s ease;
+      }
+
+      .nav-links li {
+        list-style: none;
+        position: relative;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 8px;
+        display: block;
+        font-weight: 500;
+      }
+
+      .nav-links li:hover > a {
+        color: #0af;
+      }
+
+      /* Dropdown hidden by default */
+      .nav-links ul {
+        display: none; /* hidden until hover */
+        position: absolute;
+        top: 40px;
+        left: -70%;
+        background: #111;
+        border-radius: 4px;
+        padding: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        width: 500px;
+        z-index: 10;
+      }
+
+      .nav-links.show {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Show dropdown on hover in 2 columns */
+      .nav-links li:hover > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .nav-links ul li {
+        margin-bottom: 6px;
+      }
+
+      .nav-links ul li:last-child {
+        margin-bottom: 0;
+      }
+
+      .nav-links ul a:hover {
+        color: #0af;
+      }
+
+      /* Right side */
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-right button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .nav-right img.flag {
+        width: 18px;
+      }
+
+      .nav-right a {
+        text-decoration: none !important;
+        color: #fff;
+      }
+
+      /* Mega-menu */
+      .mega-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #111;
+        color: #fff;
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        display: none;
+        width: 90%;
+        max-width: 1000px;
+        z-index: 1000;
+      }
+
+      .mega-menu.show {
+        display: block;
+      }
+
+      .mega-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      .mega-col h4 {
+        margin-bottom: 8px;
+        font-size: 16px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 4px;
+      }
+
+      .mega-col ul {
+        list-style: none;
+        padding-left: 0%;
+      }
+
+      .mega-col li {
+        margin-bottom: 6px;
+        white-space: nowrap;
+      }
+
+      .mega-col a {
+        color: #ddd;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .mega-col a:hover {
+        color: #0af;
+      }
+
+      /* Close button only for mega menu */
+      .close-btn {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        float: right;
+        margin: 5px;
+      }
+      .mega-menu .close-btn {
+        display: block;
+        text-align: right;
+        width: 5%;
+        position: relative;
+        top: -33px;
+      }
+      /* Close button for hamburger nav */
+      .nav-links .close-btn {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: right;
+        width: 100%;
+        padding: 10px 15px;
+        display: none; /* default hidden */
+      }
+
+      /* Show only when hamburger menu is visible */
+      .nav-links.show .close-btn {
+        display: block;
+      }
+     
+      /* Hamburger Mega Menu */
+      .hamburger-mega-menu {
+        position: absolute;
+        top: 101%;
+        right: 2%;
+        width: 20%;
+        background: #111;
+        color: #fff;
+        padding: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        display: none;
+        z-index: 1000;
+      }
+
+      .hamburger-mega-menu.show {
+        display: block;
+      }
+
+      .hamburger-mega-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+      }
+
+      .hamburger-mega-col h4 {
+        margin-bottom: 8px;
+        font-size: 16px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 4px;
+      }
+
+      .hamburger-mega-col ul {
+        list-style: none;
+        padding-left: 0%;
+      }
+
+      .hamburger-mega-col li {
+        margin-bottom: 6px;
+        position: relative;
+      }
+
+      .hamburger-mega-col a {
+        color: #ddd;
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .hamburger-mega-col a:hover {
+        color: #0af;
+      }
+
+      /* Dropdown styles for hamburger mega menu */
+      .hamburger-dropdown {
+        display: none;
+        padding-left: 15px;
+      
+        margin-top: 5px;
+      }
+
+      .hamburger-dropdown.show {
+        display: block;
+      }
+
+      .hamburger-dropdown li {
+        margin-bottom: 5px;
+      }
+/* header css end here */
+ .marqueeajust{
+           height: 25px !important;
+    width: 60px !important;
+    z-index: 999;
+    margin-left: -22%;
+   
+}
+.marqueeajustright{
+    height: 40px !important;
+    width: 60px !important;
+    z-index: 999;
+    
+        margin-left: 62%;
+}
+/* marquee section css */
+.marquee-wrapper{
+ 
+    transform: translateY(-11px);
+    margin-left: 2.9%;
+    margin-right: 2.9%;
+height: 45px !important;
+}
+.marquee-text span{
+  padding-right: 15px;
+} 
+.marquee-text{
+    color: white;
+}
+.marquee-text-container {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  background-color: #151515;
+}
+
+.marquee-text-track {
+  display: flex;
+  animation: scroll-loop 20s linear infinite;
+}
+
+.marquee-text {
+  flex-shrink: 0;
+  color: white;
+  padding-right: 100px; /* Space between repetitions */
+  display: flex;
+  align-items: center;
+ 
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+/* marquee section css end *Thank you for your business! We look forward to working with you again.
+
+/* marquee section css end */
+/* Because impact matters section start  */
+   /* Section Background */
+   /* Background full width */
+     /* Background full width */
+.impact-mater-bg {
+  background: url('../images/Career-Home-page-Images/impact-mater-bg-image.png') no-repeat center center;
+  background-size: 100% 100%;
+ 
+  
+  background-color: #070707;
+}
+
+
+/* Flex Container for Main Section */
+.impact-mater-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-top: -1.4%;
+  flex-wrap: nowrap; /* desktop: single row */
+}
+
+/* Left Text Section (40.67%) */
+.impact-mater-text {
+  
+padding-left: 4.17%;
+  text-align: left;
+}
+
+.impact-mater-text h2 {
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 112%;
+  color: #0A71B9;
+  margin-bottom: 20px;
+}
+
+.impact-mater-text p {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 20px; 
+  line-height: 112%;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+/* Button Image Container */
+.impact-mater-find-img {
+  background: url('../images/Career-Home-page-Images/impact-mater-find.png') ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 162px;          
+  height: 46.89px;       
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding-left: 0%;
+}
+
+.impact-mater-find-img span {
+  background-color: #0C72BA;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 12.68px;
+  line-height: 100%;
+  padding: 5px 10px;
+  border-radius: 4px;
+
+}
+
+/* Right Image Section (59.33%) */
+.impact-mater-image {
+  flex: 0 0 55.67%;
+  background: url('../images/Career-Home-page-Images/people-working-call-center.png') no-repeat center center;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 576px;     
+ 
+}
+
+/* Blurry Side Image */
+.impact-mater-bular-image img {
+  width: 205px;       
+  height: auto;      
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+  /* Parent background */
+.kot-new-card-bg-main {
+  background-image: url(../images/Career-Home-page-Images/kot-enterprises-bg-image.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 60px 0 100px 0;
+  position: relative;
+  margin-top: 2%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center container on all screens */
+}
+
+/* Inner wrapper to fix content width */
+.kot-new-card-inner {
+  width: 100%;
+
+ 
+}
+
+/* Heading aligned to first card */
+.kot-card-main-heading {
+  padding-left: 4.17%; /* Same as first card image offset */
+}
+
+.kot-card-main-heading h2 {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 100%;
+  color: #0A71B9;             
+
+  margin-bottom: 50px;
+ 
+}
+
+/* Container for cards */
+.kot-card-container {
+  display: flex;
+  
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 4.17%;
+}
+
+/* Single card */
+.kot-new-card-bg {
+  background-image: url(../images/Career-Home-page-Images/fram-card.png);
+  background-size: 100% 100%;
+  width: 288px;
+  height: 357px;                 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Card image */
+.kot-card-image img {
+  width: 262px;
+  height: 171px;
+  margin-left: 14px;
+}
+
+/* Heading inside card */
+.kot-text-card h1 {
+  font-weight: 700;
+  font-size: 18.1px;
+  line-height: 112%;
+  color: #0C72BA;
+  margin-top: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+/* Paragraph inside card */
+.kot-text-card p {
+  font-weight: 400;
+  font-size: 13.99px;
+  line-height: 1.3;
+  color: #FFFFFF;
+  padding-left: 20px;
+  padding-right: 28px;
+  margin-top: 15px;
+  text-align: left;
+  padding-bottom: 40px;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+/* -------- Responsive -------- */
+
+
+
+    /* Footer Styling */
+    .footer {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 15px 20px;
+      margin-bottom: -40px;
+    }
+
+    .footer p {
+      margin-bottom: 0;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .social-icon {
+      margin-right: 8px;
+      font-size: 16px;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .footer .row>div {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .footer {
+        text-align: center;
+      }
+    }
+
+
+
+/* new page hiring tip */
+/* IUTP-section-start */
+.iutp-bg-image{
+  background-image: url(../images/Hirirng-tips-images/iutp-bg-img.png);
+ background-size: 100% 100%;
+  height: auto;
+  background-color: #000000;
+  padding-bottom: 60px;
+  
+  
+}
+
+.iutp-text h1{
+  font-family: Montserrat;
+font-weight: 800;
+font-style: ExtraBold;
+font-size: 42px;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+color: #0A71B9;
+padding-left: 5.17%;
+}
+/* Candidate code of conduct start */
+.ccoc-bg-img {
+  background-image: url(../images/Hirirng-tips-images/ccoc-bg-img.png);
+  background-size: 100% 100%;
+ 
+  height: auto;
+ 
+}
+
+/* Ensure row aligns properly on large screens */
+.ccoc-row {
+  display: flex;
+  flex-wrap: nowrap; /* Always keep side by side on desktop */
+  justify-content: center;
+}
+
+.ccoc-people-img {
+  width: 442px !important;
+  height: 662px !important;
+     padding-left: 1.3%;
+     padding-top:4%;
+     padding-bottom: 4%;
+}
+
+.ccoc-text {
+   padding-left: 3%;   
+   padding-right: 7%;
+}
+
+.ccoc-text h1 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #0A71B9;
+  margin-bottom: 15px;
+}
+
+.ccoc-text p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.ccoc-text-p-heading {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+/*  Empowering Your Success with KOT -start  */
+
+/* Main Section Background */
+.empowering-success-section {
+  background-image: url('../images/Hirirng-tips-images/Empowering-success.png');
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 70px 0 80px 0;
+  text-align: center;
+}
+
+/* Heading */
+.empowering-heading h2 {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 1.2;
+  color: #0C72BA;
+  margin-bottom: 50px;
+}
+.emp-card p{
+  font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 1.4;
+letter-spacing: 0%;
+display: flex;
+align-items: center;
+text-align: justify;
+padding-right:19%;
+
+}
+/* Cards Container */
+.empowering-cards {
+  display: flex;
+  justify-content: space-evenly;
+ 
+  flex-wrap: wrap; /* wrap on smaller screens */
+}
+
+/* Single Card */
+.emp-card {
+  
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;  /* horizontally center text */
+  align-items: center;      /* vertically center text */
+  text-align: center;
+  padding-left: 2%;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Backgrounds */
+.emp-card-bg-1 {
+  background-image: url('../images/Hirirng-tips-images/Empowering-success-img.png');
+  width: 342px;
+  height: 350px;
+}
+.emp-card-bg-2 {
+  background-image: url('../images/Hirirng-tips-images/Empowering-success-imag-2.png')
+  ;
+ width: 342px;
+  height: 350px;
+}
+.emp-card-bg-3 {
+  background-image: url('../images/Hirirng-tips-images/Empowering-success-image-3.png');
+width: 342px;
+  height: 350px;
+}
+
+
+        /* footer  */
+
+        
+        .footer {
+            background-color: #1e1e1e;
+            color: white;
+            padding: 15px 20px;
+            /* reduced padding */
+            margin-bottom: -40px;
+            /* margin-top: 10px; */
+        }
+
+        .footer p {
+            margin-bottom: 0;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .social-icon {
+            margin-right: 8px;
+            font-size: 16px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .footer .row>div {
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .footer {
+                text-align: center;
+            }
+        }
+
+
+
+
+/*  Empowering Your Success with KOT -end */
+
+/* Navigating Your Career Journey at KOT -section-start */
+.ncj-bg-img{
+ background-image: url(../images/Hirirng-tips-images/ncj-bg-img.png);
+  background-size:100% 100%;
+  height: auto;
+  padding-bottom: 70px;
+}
+.ncj-img{
+  width: 100%;
+  height: 338px;
+}
+.ncj-image img{
+  width: 1148.35px;
+  height: auto;
+}
+.ncj-text h1{
+font-family: Montserrat;
+font-weight: 900;
+font-style: Black;
+font-size: 42px;
+
+line-height: 1.2;
+letter-spacing: 0%;
+color: #0C72BA;
+padding-right: 50px;
+}
+
+/* Navigating Your Career Journey at KOT -section-end */
+
+
+/*  */
+/* itr- Candidate code of conduct start */
+.itr-ccoc-bg-img {
+  background-image: url(../images/Hirirng-tips-images/ccoc-bg-img.png);
+  
+  background-size: 100% 100%;
+ height: auto;
+ 
+}
+
+.itr-ccoc-people-img {
+  width: 442px;
+ padding-top: 3%;
+       height: 662px;
+      padding-left: 0.6%;
+      padding-bottom: 3%;
+      padding-right: 0%;
+}
+
+.itr-ccoc-text {
+  
+
+  padding-top: 80px;
+  padding-left: 0%;
+  padding-bottom: 80px;
+  padding-right: 2%;
+  
+}
+
+.itr-ccoc-text h1 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #0A71B9;
+  padding-bottom: 12px;
+}
+
+.itr-ccoc-text p {
+  font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+
+line-height: 1.4;
+letter-spacing: 0%;
+padding-right: 2%;
+  color: #FFFFFF;
+ text-align: justify;
+}
+
+.itr-ccoc-text-p-heading {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #FFFFFF;
+ 
+}
+
+/* Responsive font tweaks for smaller screens */
+
+/* itr-Candidate code of conduct end */
+
+/* ITFAR- Candidate code of conduct start */
+.ITFAR-ccoc-bg-img {
+  background-image: url(../images/Hirirng-tips-images/ccoc-bg-img.png);
+  
+  background-size: 100% 100%;
+ height: auto;
+ 
+}
+
+.ITFAR-ccoc-people-img {
+  width: 442px !important;
+ 
+       height: 662px !important;
+      padding-left:1.5%;
+      padding-bottom: 4%;
+      padding-top: 4%;
+
+}
+
+.ITFAR-ccoc-text {
+ 
+ 
+  padding-top: 5%;
+  padding-left: 2%;
+  padding-bottom: 50px;
+  padding-right: 7%;
+}
+
+.ITFAR-ccoc-text h1 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #0A71B9;
+}
+
+.ITFAR-ccoc-text p {
+ font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 1.4;
+letter-spacing: 0%;
+
+ text-align: justify;
+  color: #FFFFFF;
+ 
+}
+
+.ITFAR-ccoc-text-p-heading {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  color: #FFFFFF;
+ 
+}
+
+
+/* itr-Candidate code of conduct end */
+/* Our-benifit-screen-start */
+
+ .wcb-bg-img {
+      background-image: url(../images/our-benifits-images/wcb-our-benifit-bg.png);
+      background-size: 100% 100%;
+     
+      height: auto;
+     padding-left: 4.17%;
+     
+    }
+
+
+    .wcb-ccoc-people-img{
+      width: 640px;
+      height: 427px;
+    }
+    .ob-ccoc-text {
+ 
+  padding-bottom: 6%;
+  
+  padding-left: 2%;
+  padding-right: 1%;
+}
+
+.ob-ccoc-text h1 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 100%;
+  color: #0A71B9;
+ padding-top:18%;
+ 
+}
+
+.ob-ccoc-text p {
+  font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 1.4;
+letter-spacing: 0%;
+padding-right: 50px;
+  color: #FFFFFF;
+  text-align: justify;
+ 
+}
+
+.ob-ccoc-text-p-heading {
+  display: block;
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 1.2;
+letter-spacing: 0%;
+
+  color: #FFFFFF;
+ 
+}
+
+
+    .text-WCB h2 {
+           font-family: Montserrat;
+        font-weight: 900;
+        font-style: Black;
+        font-size: 52px !important;
+     
+        line-height: 100%;
+        letter-spacing: 0%;
+        
+padding-bottom: 4.17%;
+      color: #0C72BA;
+      padding-top: 4.17%;
+      padding-left:4.17%;
+      padding-bottom: 4.17%;
+
+    }
+
+    .text-WCB p {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: 27px;
+      color: #ffffff;
+
+    }
+    
+    /* our benifet */
+    .WCB-bg-image{
+      background-image: url(../images/our-benifits-images/wcb-bg-img.png);
+     background-size: 100% 100%;
+     height: auto;
+     
+    }
+    .slider-container-WCB {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      overflow: hidden;
+    }
+
+    .slider-wrapper-WCB {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+     margin: 0 80px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      z-index: 1;
+    }
+
+    .slider-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slider-item-WCB {
+      flex: 0 0 auto;
+      width: 360px;
+      
+    }
+
+    .slider-item-image-1, .slider-item-image-2, .slider-item-image-3 {
+      width: 360px;
+      height: 70px;
+      background-size: cover;
+    }
+
+    .slider-item-image-1 {
+      background-image: url("../images/our-benifits-images/wcb-img-1.png");
+    }
+
+    .slider-item-image-2 {
+      background-image: url("../images/our-benifits-images/wcb-img-2.png");
+    }
+
+    .slider-item-image-3 {
+      background-image: url("../images/our-benifits-images/wcb-img-3.png");
+    }
+
+    .WCB-paragraph {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: 27px;
+      color: #ffffff;
+      width: 70%;
+      word-wrap: break-word;
+      margin-bottom: 0%;
+    }
+    .WCB-paragraph-slide-2 {
+      font-family: Montserrat;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 17px;
+  leading-trim: NONE;
+  line-height: 1.2;
+  letter-spacing: 0%;
+   column-rule: #FFFFFF;
+   padding-right: 10%;
+   text-align: justify;
+    }
+    .arrow-btn-WCB {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  background: transparent;
+  border: none;
+  font-size: 50px;
+  padding: 10px 30px;
+  cursor: pointer;
+  z-index: 999;
+  color: white !important; /* Enforce white color */
+}
+
+
+    .arrow-left-WCB {
+      left: 0;
+    }
+
+    .arrow-right-WCB {
+      right: 0;
+    }
+
+    .slider-side-image-WCB {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 130px;
+      height: auto;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .left-image-WCB {
+      left: 30px;
+          height: 65vh;
+    z-index: 999;
+    }
+
+    .right-image-WCB {
+      right:30px;
+          height: 65vh;
+    z-index: 999;
+    }
+
+   
+    /* Main background */
+    /* Section background */
+/* Main background */
+    .cultre-attribute-bg {
+      background-image: url(../images/culture-image/culture-bg-img.png);
+      background-size: 100% 100%;
+      height: auto;
+    }
+
+    /* Row single line */
+    .cultre-attribute-bg .row {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-end; /* bottom alignment */
+    }
+
+    /* Left Column */
+    .culture-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 30px;
+      height: 665px;
+      width: 40.33%;
+      padding-left: 4.17%;
+    }
+
+    .culture-attribute-text h2 {
+      font-family: Montserrat, sans-serif;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 100%;
+      color: #0A71B9;
+      max-width: 440px;
+      padding-left: 4.17;
+    }
+
+    /* Swiper main box */
+    .swiper-main {
+      max-width: 100%;
+      width: 446px;
+      height: auto;
+      position: relative;
+      
+      overflow: hidden;
+    }
+
+    .swiper-container {
+      max-width: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      top: 8%;
+      box-sizing: border-box;
+    }
+
+    /* Fade Overlay */
+    .fade-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: url(../images/culture-image/fadeimg.png);
+      background-size: 100% 100%;
+      /* pointer-events: none; */
+      z-index: 2;
+    }
+
+    /* Slide content */
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    /* Chat Box */
+    .chat-box {
+      padding: 40px 20px 60px 40px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 446px;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      color: white;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      position: relative;
+      z-index: 3;
+      background: transparent;
+    }
+
+    .chat-box img {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .chat-box h1 {
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 100%;
+      color: #FFFFFF;
+      margin: 0;
+      
+    }
+
+    .chat-box p {
+      font-family: Montserrat, sans-serif;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 1.4;
+      color: #FFFFFF;
+      max-width: 100%;
+      text-align: justify;
+    }
+
+    
+
+    
+
+  
+    /* Right Column */
+    .culture-right {
+      position: relative;
+      width: 58.35%;
+      height: 649px;
+      background: url(../images/culture-image/people-dancing-folk-full-shot.png) no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .culture-right .fade-cluture-image img {
+      position: absolute;
+      left:0px;
+      top: 0px;
+          height: 689px !important;
+      width: 205px;
+    }
+
+    /* Tablet */
+       
+        .mobile-slider-container {
+            background-image: url(../images/culture-image/our-client-bg-img.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            max-width: 100%;
+            width: 100%;
+           
+           margin-top: 5%;
+          background-color: #2e2e2e;
+            overflow: hidden;
+            padding: 20px;
+            position: relative;
+            
+        }
+        
+        .mobile-slider-heading {
+            text-align: center;
+            margin-bottom: 15px;
+            color:#B4B4B4;
+           font-family: Montserrat;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 32px;
+            leading-trim: NONE;
+            line-height: 112.00000000000001%;
+            letter-spacing: 0%;
+                padding-top: 15%;
+        }
+        
+        .mobile-main-heading {
+            text-align: center;
+            margin-bottom: 25px;
+            font-family: Montserrat;
+                font-weight: 700;
+                font-style: Bold;
+                font-size: 42px;
+                leading-trim: NONE;
+                line-height: 112.00000000000001%;
+                letter-spacing: 0%;
+              color: #0C72BA;
+              margin-bottom: 0%;
+                margin-bottom: 10%;
+                margin-top: 0%;
+        }
+        .mobile-main-heading-3{
+            text-align: center !important;
+            margin-bottom: 25px !important;
+            font-family: Montserrat !important;
+                font-weight: 700 !important;
+                font-style: Bold !important;
+                font-size: 42px !important;
+                
+                line-height: 112.00000000000001% !important;
+                letter-spacing: 0%;
+              color: #068A4F !important;
+              margin-bottom: 0% !important;
+                margin-bottom: 0% !important;
+                margin-top: 0% !important;
+        }
+        .mobile-slider {
+            position: relative;
+            overflow: hidden;
+            height: 60vh;
+            border-radius: 12px;
+        }
+        
+        .mobile-slider-track {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+            width: 400%; /* 4 slides */
+            height: 100%;
+        }
+        
+        .mobile-slide {
+           background-image: url(../images/Eppisode-image/epi-front-img.png);
+           background-size: 100% 100%;
+           background-repeat: no-repeat;
+               width: 25%;
+            padding: 11px;
+            padding-top: 0%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .mobile-testimonial-text {
+                        font-family: Montserrat;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 22px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+         color: #FFFFFF;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+        
+        .mobile-testimonial-author {
+                            font-family: Montserrat;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 22px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+         color: #FFFFFF;
+            text-align: center;
+            
+            margin-top: 10px;
+        }
+        
+        .mobile-slider-controls {
+            display: none;
+        }
+        
+        /* Animation for auto-sliding */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(0); }
+            25% { transform: translateX(-25%); }
+            45% { transform: translateX(-25%); }
+            50% { transform: translateX(-50%); }
+            70% { transform: translateX(-50%); }
+            75% { transform: translateX(-75%); }
+            95% { transform: translateX(-75%); }
+            100% { transform: translateX(0); }
+        }
+        
+        .mobile-slider-track {
+            animation: slide 20s infinite ease-in-out;
+        }
+        
+        /* Pause animation on hover */
+        .mobile-slider-container:hover .mobile-slider-track {
+            animation-play-state: paused;
+        }
+        @media screen and (min-width: 768px) and (max-width: 4000px) {
+    .mobile-slider-container {
+        display: none !important;
+    }
+    
+}
+ 
+    /* Mobile */
+   
+        .CAceo-bg{
+        background-image: url(../images/culture-image/culture-bg-img.png);
+        background-size: 100% 100%;
+        height: auto;
+        }
+          .ceo-bg-img{
+            background-image: url(../images/culture-image/ceo-bg-image.png);
+            background-size: 140% 100%;
+            background-position: center !important;
+            height: 580px;
+          }
+
+          .ceo-text h2{
+            font-family: Montserrat;
+          font-weight: 900;
+          font-style: Black;
+          font-size: 42px;
+          
+          line-height: 1.2;
+          color: #0A71B9;
+
+          }
+          .ceo-text p{
+            font-family: Montserrat;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 22px !important;
+        leading-trim: NONE;
+        line-height: 1.4;
+        letter-spacing: 0%;
+       margin-bottom: 0%;
+       color: #FFFFFF;
+        padding-right: 22%;
+        text-align: justify;
+          }
+        .culture-attribute-bg-img{
+          background-image: url(../images/culture-image/people-dancing-folk-full-shot.png);
+          width: 882px;
+      
+        height: 665px;
+
+        }
+        .fade-cluture-image{
+         
+     margin-top: 20px;
+     margin-right: 14px;
+
+        }
+        .fade-cluture-image img{
+          width: 205px;
+      height: 665px;
+      padding-bottom: 5%;
+
+        }
+
+    /*  Our cultural attributes-section-end */
+
+
+    /* Giving defines our identity.- section-start -- */
+
+        /* Background Section */
+    .Giving-bg-img {
+      background-image: url(../images/culture-image/culture-bg-img.png);
+      background-size:100% 100%;
+      
+    
+      height: auto px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    /* Swiper Container */
+    .giving-slider {
+      width: 90%;
+     
+      position: relative;
+    }
+.impact-mater-find-img-2 {
+ background-color: #068A4F;
+  width: 162px;          
+  height: 46.89px;       
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding-left: 0%;
+} 
+    /* Slide Layout: Text + Image side by side */
+    .giving-slider .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: nowrap;
+    }
+
+    /* Text */
+    .giving-text {
+      flex: 1 1 50%;
+      color: white;
+      padding-left: 2%;
+      padding-right: 5%;
+    }
+    .giving-text h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #007bff;
+    }
+    .giving-text p {
+     font-family: Montserrat;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 17px;
+        leading-trim: NONE;
+        line-height:1.4;
+        letter-spacing: 0%;
+        color: #FFFFFF;
+
+    }
+
+    /* Image */
+    .giving-image {
+      flex: 1 1 50%;
+      padding-right: 60px;
+    }
+    .giving-image img {
+     width: 704px !important;
+     height: 531px !important;
+     padding-top: 60px;
+      padding-bottom: 30px;
+    }
+
+    /* Pagination Dots - Full Width Center Bottom */
+    .Giving-bg-img .swiper-pagination {
+      position: relative;
+      margin-top: 15px;
+      text-align: center;
+      padding-left: 100px;
+      padding-bottom: 20px;
+
+    }
+    .Giving-bg-img .swiper-pagination-bullet {
+      background: #FFFFFF;
+      opacity: 0.7;
+      width: 12px;
+      height: 12px;
+    }
+    .Giving-bg-img .swiper-pagination-bullet-active {
+      background:blue;
+      opacity: 1;
+    }
+
+    /* External Arrow Buttons */
+    .Giving-bg-img .swiper-button-next,
+    .Giving-bg-img .swiper-button-prev {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: 0.3s;
+    }
+
+    .Giving-bg-img .swiper-button-next::after,
+    .Giving-bg-img .swiper-button-prev::after {
+      font-size: 18px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .Giving-bg-img .swiper-button-next:hover,
+    .Giving-bg-img .swiper-button-prev:hover {
+      background: rgba(252,185,0,0.9);
+    }
+
+    /* Position outside container */
+    .Giving-bg-img .swiper-button-prev { left: 20px; }
+    .Giving-bg-img .swiper-button-next { right: 20px; }
+
+   
+
+
+    /* our-client-section end */
+/* Diversity and investing */
+ /* Section Container */
+    .Investing-bg-image {
+      background-image: url(../images/Eppisode-image/pe-bg-img.png);
+      background-size: 100% 100%;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+   
+
+    /* Slider Container */
+    .slider-container-Investing {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      overflow: hidden;
+    }
+
+    /* Scrollable Slider */
+    .slider-wrapper-Investing {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      margin: 0 60px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      z-index: 1;
+      width: 100%;
+    }
+    .slider-wrapper-Investing::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Slider Item */
+    .slider-item-Investing {
+      flex: 0 0 100%; /* full width like col-lg-12 */
+      text-align: center;
+      
+      padding: 10px 20px;
+    }
+
+    /* Central Text Content */
+    /* Central Text Content */
+.slider-item-Investing h3 {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-style: Black;
+  font-size: 52px;
+  line-height: 110%; /* Slightly relaxed for breathing space */
+  letter-spacing: 0%;
+  color: #0A6AAD;
+  margin-bottom: 20px;
+}
+
+.slider-item-Investing h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 70px;
+  line-height: 115%; /* Improved readability */
+  letter-spacing: 0%;
+  padding-top: 20px;
+  color:transparent;
+      
+    -webkit-text-stroke: 2px #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.slider-item-Investing p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 21.75px;
+  line-height: 150%; /* Helps paragraph readability */
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 800px; /* Prevent super wide paragraphs */
+  margin: 0 auto 20px auto;
+  padding: 0 10px;
+}
+
+/* Responsive Tweaks */
+
+    /* Arrows */
+    .arrow-btn-Investing {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      font-size: 50px;
+      cursor: pointer;
+      color: white;
+      z-index: 1000;
+    }
+    .arrow-left-Investing {
+      left: 40px;
+    }
+    .arrow-right-Investing {
+      right: 40px;
+    }
+
+    /* Side Images */
+    .slider-side-image-Investing {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 130px;
+      height: 65vh;
+      z-index: 999;
+      pointer-events: none;
+    }
+    .left-image-Investing {
+      left: 50px; /* Next to left arrow */
+    }
+    .right-image-Investing {
+      right: 50px; /* Next to right arrow */
+    }
+
+    
+
+/* end of diversiting-work */
+ /* Background of the section */
+.flexible-bg-image {
+  background-image: url(../images/flexible-work-images/flexible-work-bg-image.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 15px 0; /* Equal top-bottom padding */
+}
+
+/* Image box with fixed size */
+.Ahwfp-image {
+  width: 615px;
+  height: 564px;
+  display: flex;
+  align-items: center;
+ padding-left: 4.17%;
+}
+
+.Ahwfp-image img {
+  width: 615px;
+  height: 564px;
+ 
+}
+
+/* Text styling */
+.Ahwfp-text h2 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 42px;
+  color: #0C72BA;
+  line-height: 1.12;
+  padding-bottom: 20px;
+}
+
+.Ahwfp-text p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #FFFFFF;
+  padding-right: 7%;
+  text-align: justify;
+}
+
+/* Responsive: On small screens image becomes fluid */
+
+  
+/* Section Background */
+.future-work-bg {
+  background: url(../images/flexible-work-images/future-work-bg-img.png) no-repeat center center;
+  background-size: 100% 100%;
+  padding: 80px 0;
+}
+
+/* Main container: flex for 2 columns */
+.future-work-container {
+  display: flex;
+  
+  align-items: center;
+ 
+  margin: 0 auto;
+ padding-left: 4.17%;
+  gap:10px;
+}
+
+/* Text Column (40%) */
+.future-text {
+  flex: 0 0 40%;
+}
+
+.future-text h2 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: #0C72BA;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.future-text p {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #FFFFFF;
+  text-align: justify;
+}
+
+/* Image Column (60%) */
+.future-img {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.future-img img {
+  width: 675px;
+  height: 450px;
+  object-fit: contain;
+}
+
+
+
+    /* The future of work is here-section-end */
+
+    /* working-model-section-start */
+            .wm-bg-image{
+                        background-image: url(../images/flexible-work-images/wm-bg-img.png);
+
+               background-repeat: no-repeat;
+               background-size: 100% 100%;
+               padding-bottom: 20px;
+               padding-left: 4.17%;
+               padding-right: 4.17%;
+
+                    }
+                    .wm-image-1{
+                    background-image: url(../images/flexible-work-images/wm-img1.png);
+                   width: 106%;
+                    height:70px;
+                    background-repeat: no-repeat;
+
+                    }
+                    .wm-image-2{
+                  background-image: url(../images/flexible-work-images/wm-img2.png);
+                    width: 106%;
+                    height:70px;
+                    background-repeat: no-repeat;
+                    }
+                    .wm-image-3{
+                     background-image: url(../images/flexible-work-images/work-img-slide-3.png);
+                     background-size:100% 1005;
+                       width: 106%;
+                    height:70px;
+                    background-repeat: no-repeat;
+                    }
+                    .text-wm h2{
+                    font-family: Montserrat;
+                font-weight: 700;
+                font-style: Bold;
+                font-size: 52px;
+                leading-trim: NONE;
+                line-height: 112.00000000000001%;
+                letter-spacing: 0%;
+
+            color: #0C72BA;
+            padding-top: 4.17%;
+            padding-bottom: 4%;
+                    }
+                    .text-wm p{
+                        font-family: Montserrat;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 22px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #FFFFFF;
+                    }
+                    .wm-paragraph{
+                    font-family: Montserrat;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 17px;
+
+            line-height: 100%;
+            letter-spacing: 0%;
+           padding-right:18%;
+         text-align: justify;
+            color: #FFFFFF;
+                    }
+                    .wm-paragraph-span{
+                        font-family: Montserrat;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 27px;
+            
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #FFFFFF;
+                    }
+
+
+
+                /* working-model-section-end */
+
+           /* Background for Categories Section */
+     /* Background Section */
+    .categorries-bg-image {
+      background-image: url(../images/oppurtunities-images/Back\ Crown\ Frame.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      
+      padding-bottom: 50px;
+      margin-top: 4%;
+    }
+
+    /* Main Heading */
+    .main-heading-catagory {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4); /* Optional visibility */
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 10px;
+      max-width: 400px; 
+      padding: 10px 20px;
+      margin-bottom: 40px;
+    }
+
+    .main-heading-catagory .div-icon {
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    /* .main-heading-catagory .div-icon:hover {
+      transform: rotate(180deg);
+    } */
+
+    /* Custom Card */
+    .custom-div {
+      height: 110px;
+      background-size: 100% 100%;
+      background-position: center;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      position: relative;
+      padding: 0 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      
+    }
+    /* .custom-div:hover {
+      transform: translateY(-5px);
+    } */
+
+    /* Dark overlay for text visibility */
+    .custom-div::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    /* Card Text */
+    .div-text {
+      position: relative;
+      z-index: 2;
+      color: white;
+      font-family: Montserrat;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 22px;
+    leading-trim: NONE;
+    line-height: 112.00000000000001%;
+    letter-spacing: 0%;
+ 
+      padding-right: 80px;
+    }
+
+    /* Card Icon */
+    .div-icon {
+      position: relative;
+      z-index: 2;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .last-row {
+      width: 95%;
+      margin-left: 3%;
+    }
+    /* .div-icon:hover {
+      transform: rotate(180deg);
+    }
+    */
+    
+/* episode new page start */
+/* KOT's Early in Profession experience-section-start */
+.ep-bg-image{
+  background-image: url(../images/Eppisode-image/pe-bg-img.png);
+  background-size: 100% 100%;
+  height: auto;
+}
+.epe-image-text {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 4.17%;
+}
+.epe-text {
+padding-left: 4.17% !important;
+}
+.epe-text p{
+ font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 22px;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+
+padding-right: 5%;
+
+}
+.epe-text h1{
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 42px;
+
+line-height: 112%;
+letter-spacing: 0%;
+color: #068A4F;
+}
+.epes-text h1{
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 42px;
+
+line-height: 112%;
+letter-spacing: 0%;
+color: #068A4F;
+}
+
+.epes-text p{
+ font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 22px;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: justify;
+padding-right: 5%;
+
+}
+/* Main container with background image and overlay */
+.epi-slider-bg{
+  background-image: url(../images/Eppisode-image/pe-bg-img.png);
+  background-size: 100% 100%;
+  height: auto;
+}
+    .epi-main-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      padding: 20px;
+      overflow: hidden;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    /* Background image */
+    .epi-main-container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('../images/Eppisode-image/epi-white-img.png'); /* Add your background image */
+      background-size:100% 100%;
+      background-position: center;
+      z-index: -1;
+    }
+
+    /* Swiper Wrapper */
+    .swiper-wrapper{
+    
+    }
+    .epi-swiper {
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .epi-swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: #f0f0f0;
+    }
+
+    /* Bottom-right card on slide */
+    .epi-slide-card {
+      position: absolute;
+      bottom: -15px;
+      right: 20px;
+      background: #0C72BA;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 235px;
+      height: 238px;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Swiper arrows */
+    .epi-swiper-button-next,
+    .epi-swiper-button-prev {
+      color: #0C72BA;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      /* .epi-main-container {
+        height: 250px;
+      }
+      .epi-slide-card {
+        font-size: 14px;
+        width: 200px;
+        height: 210px;
+        padding: 12px 20px;
+      } */
+    }
+/* KOT's Early in Profession experience-end */

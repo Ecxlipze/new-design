@@ -1,0 +1,114 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* MAIN SECTION */
+.main {
+  background-color: #1e1e1e;
+  padding: 20px 0;
+}
+
+/* AUDIT/CONTACT SECTION */
+.Audit {
+  background: url('../images/Extra/crown.png') center/cover no-repeat;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.social-icon {
+  margin: 0 6px;
+  font-size: 16px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .footer .row > div {
+    margin-bottom: 10px;
+  }
+}
+
+/* CARD & FORM */
+.card {
+  background: url(../images/Extra/Frame\ 2608408.png) center/cover no-repeat, black;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  background-color: #1e1e1e;
+}
+
+.btn-primary {
+  border-radius: 0.5rem;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.logo {
+  height: 80px;
+  margin: 40px auto 20px;
+  display: block;
+}
+
+
+/* Marquee Section */
+.marquee-wrapper {
+  max-width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.marquee-text-container {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee-text-track {
+  display: flex;
+  animation: scroll-loop 20s linear infinite;
+}
+
+.marquee-text {
+  flex-shrink: 0;
+  color: white;
+  padding-right: 80px;
+  font-size: 1rem;
+}
+
+@keyframes scroll-loop {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOT ENTERPRISES</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link rel="icon" href="assets/images/navImg/Vector.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/CSS/styles.css" />
+    <link rel="stylesheet" href="assets/CSS/header.css">
+    <link rel="stylesheet" href="assets/CSS/style.min.css">
+    <link rel="stylesheet" href="assets/CSS/media_querie.css">
+    <link rel="stylesheet" href="assets/CSS/chatbot.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  </head>
+ <body class="overflow-x-hidden">
+   
+   <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"> <img src="assets/images/Logo.png" alt="KOT Logo"></a>
+            </div>
+
+            <!-- Center nav -->
+            <ul class="nav-links" id="navLinks" style="padding-top: 12px;">
+                <li><button class="close-btn" onclick="toggleNav()">×</button></li>
+                <li>
+                    <a href="#">Corporate <i class="fas fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="pages/why-kot.html">Why KOT </a></li>
+                        <li><a href="pages/board-of-directors.html">Board of Directors</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Careers <i class="fas fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="pages/careers.html">Jobs</a></li>
+                        <li><a href="#">Internships</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="pages/our-services.html">Services <i class="fas fa-caret-down"></i></a>
+                    <ul>
+                      <li><a href="pages/agile-app.html"><img src="assets/images/navImg/agileapp.png" alt=""></a></li>
+                      <li><a href="pages/app-sculputure.html"><img src="assets/images/navImg/appscu.png" alt=""></a></li>
+                      <li><a href="pages/digit-trail-black.html"><img src="assets/images/navImg/digitrail.png" alt=""></a></li>
+                      <li><a href="pages/flawless-services.html"><img src="assets/images/navImg/flawless.png" alt=""></a></li>
+                      <li><a href="pages/graphoria-services.html"><img src="assets/images/navImg/graphoria.png" alt=""></a></li>
+                      <li><a href="pages/meerchanity-service.html"><img src="assets/images/navImg/297286540.png" alt=""></a></li>
+                      <li><a href="pages/web-sculputre.html"><img src="assets/images/navImg/web-scu.png" alt=""></a></li>
+                       
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Consultancy <i class="fas fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="pages/Audits.html">Audits</a></li>
+                        <li><a href="pages/Data-Enginerring.html">Data Engineering</a></li>
+                        <li><a href="pages/Gen-AI.html">Generative AI</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Programs <i class="fas fa-caret-down"></i></a>
+                    <ul>
+                      <li><a href="pages/episode-service.html"><img src="assets/images/navImg/episode.png" alt=""></a></li>
+                      <li><a href="pages/venture-xcelerator.html"><img src="assets/images/navImg/venture.png" alt=""></a></li>
+                      
+                    </ul>
+                </li>
+                
+                <li><a href="pages/contact.html">Contact Us</a></li>
+              </ul>
+
+            <!-- Right icons -->
+            <div class="nav-right">
+              <button><i class="fas fa-user"></i><a href="https://kot-e.com/admin"> Sign In </a></button>
+              <button class="hamburger" onclick="toggleHamburgerMega()"><i class="fas fa-th"></i></button>
+            </div>
+
+            <!-- Hamburger Mega menu -->
+            <div class="hamburger-mega-menu" id="hamburgerMegaMenu">
+                <button class="close-btn" onclick="toggleHamburgerMega()">×</button>
+              <div class="hamburger-mega-content">
+                  <!-- Main Navigation Column -->
+                  <div class="hamburger-mega-col">
+                    <h4>Main Navigation</h4>
+                        <ul>
+                            <li>
+                              <a href="javascript:void(0)" onclick="toggleHamburgerDropdown(this)">  Corporate <i class="fas fa-caret-down"></i> </a>
+                                <ul class="hamburger-dropdown">
+                                  <li><a href="pages/why-kot.html">Why KOT</a></li>
+                                  <li><a href="pages/board-of-directors.html">Board of Directors</a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="toggleHamburgerDropdown(this)"> Careers <i class="fas fa-caret-down"></i> </a>
+                                <ul class="hamburger-dropdown">
+                                    <li><a href="pages/careers.html">Jobs</a></li>
+                                    <li><a href="#">Internships</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="toggleHamburgerDropdown(this)"> Service <i class="fas fa-caret-down"></i>   </a>
+                                <ul class="hamburger-dropdown">
+                                  <li><a href="pages/agile-app.html"><img src="assets/images/navImg/agileapp.png" alt=""></a></li>
+                                  <li><a href="pages/app-sculputure.html"><img src="assets/images/navImg/appscu.png" alt=""></a></li>
+                                  <li><a href="pages/digit-trail-black.html"><img src="assets/images/navImg/digitrail.png" alt=""></a></li>
+                                  <li><a href="pages/flawless-services.html"><img src="assets/images/navImg/flawless.png" alt=""></a></li>
+                                  <li><a href="pages/graphoria-services.html"><img src="assets/images/navImg/graphoria.png" alt=""></a></li>
+                                  <li><a href="pages/meerchanity-service.html"><img src="assets/images/navImg/297286540.png" alt=""></a></li>
+                                  <li><a href="pages/web-sculputre.html"><img src="assets/images/navImg/web-scu.png" alt=""></a></li>
+                       
+                                </ul>
+                            </li>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)" onclick="toggleHamburgerDropdown(this)">  Consultancy <i class="fas fa-caret-down"></i> </a>
+                                    <ul class="hamburger-dropdown">
+                                        <li><a href="pages/Audits.html">Audits</a></li>
+                                        <li><a href="pages/Data-Enginerring.html">Data Engineering</a></li>
+                                        <li><a href="pages/Gen-AI.html">Generative AI</a></li>
+                                    </ul>
+                                </li>
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)" onclick="toggleHamburgerDropdown(this)"> Programs <i class="fas fa-caret-down"></i> </a>
+                                        <ul class="hamburger-dropdown">
+                                          <li><a href="pages/episode-service.html"><img src="assets/images/navImg/episode.png" alt=""></a></li>
+                                          <li><a href="pages/venture-xcelerator.html"><img src="assets/images/navImg/venture.png" alt=""></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" onclick="toggleHamburgerDropdown(this)"> Support <i class="fas fa-caret-down"></i> </a>
+                                        <ul class="hamburger-dropdown">
+                                            <li><a href="pages/Education.html">Education Support</a></li>
+                                            <li><a href="pages/Partner.html">Partner Support</a></li>
+                                            <li><a href="pages/Work.html">Work Support</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="pages/contact.html">Contact Us</a></li>
+                                        
+                                </ul>
+
+                              </ul>
+                            </ul>
+                          </div>
+                </div>
+            </div>
+        </nav>
+        <!-- ================= HEADER END ================= -->
+<!-- IUTP-section-start -->
+<div class="container-fluid iutp-bg-image mb-4 ">
+   <!-- Marquee Section with Side Images on Left & Right -->
+  <div class="marquee-wrapper  position-relative d-flex align-items-center overflow-hidden" style="height: 60px;">
+  
+  <!-- Left Image -->
+      <div class="position-absolute start-0 top-0 bottom-0 z-2 d-flex align-items-center px-2 ">
+          <img src="assets/images/marquee-left-image.png" alt="Left" class="marqueeajust">
+      </div>
+
+  <!-- Scrolling Text -->
+  <div class="marquee-text-container flex-grow-1 px-5">
+    <div class="marquee-text-track">
+      <div class="marquee-text fw-bold">
+        <span>
+          <img src="assets/images/marquee.png" alt="">
+        </span>
+            KOT Enterprises priorities cultural values and well being of work spaces. Therefore staff will be visiting Siran Valley.
+      </div>
+      <div class="marquee-text fw-bold">
+        <span>
+          <img src="assets/images/marquee.png" alt="">
+        </span>
+            KOT Enterprises priorities cultural values and well being of work spaces. Therefore staff will be visiting Siran Valley.
+        </div>
+    </div>
+  </div>
+
+
+  <!-- Right Image -->
+    <div class="position-absolute end-0 top-0 bottom-0 z-2 d-flex align-items-center px-2 ">
+      <img src=" assets/images/marquee-right-image.png" alt="Right" class="marqueeajustright" style="margin-right: 11%;">
+    </div>
+
+</div>
+<!-- marquee area end here -->
+ <div class="home-main-container">
+  <div class="row">
+    <div class="stmcs-main-text col-lg-6 col-md-7 col-sm-12 ">
+      <div class="text-stmcs">
+        <h1> Empowering Businesses, Preserving Identity</h1>
+<!-- <p class="stmcs-p1" >Tech that empowers, service that delights</p> -->
+        <div class="text-stmcs-p">
+          <p>Looking for a platform that adapts according to your needs? Where your creativity gets a boost? Look no further. We at KOT are determined to help our clients reach their goals in the most efficient manner.</p>
+        </div>
+      </div>
+    <div class="text-btn ">
+      <div class="text-stmcs-btn-1">
+           <a href="assets/wisdomsphere.pdf"> EXPLORE </a>
+      </div>
+      <div class="text-stmcs-btn-2">
+         <a href="pages/contact.html"> CONTACT US </a>   
+      </div>
+    </div>
+  </div>
+
+  <div class="stmcs-bg-image col-lg-6 col-md-5 col-sm-12  ">
+    <div class="stmc-image ">
+      <img src="assets/images/home/smcs-gp.png" alt="">
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+
+
+  </div>
+
+<!-- end-Where Smart Technology Meets Customer Success -->
+
+
+<!-- What We Offer-start -->
+ <div class="wwo-main-container overflow-x-hidden ">
+  <div class="row">
+    <div class="wwo-main-container-text col-lg-4 col-md-12 ">
+     <h1>What We Offer</h1>
+     <p>KOT Enterprises was established in 2018. The idea behind its inauguration was to build a software house that not only provides the best solutions to your technological problems but also to humanize them. In this era of AI, KOT is determined to provide services that are ethically aligned. Discover the world of KOT by clicking below</p>
+    <div class="btn-blue-img">
+      <div style="font-weight: 800; font-family: 'Montserrat'; padding: 5px; font-size: 14px;">
+        <a style="text-decoration: none; color: white;" href="pages/our-services.html">  SEE ALL SERVICES </a>
+      </div>
+    </div>
+  </div>
+    <div class="who-main-container-card col-lg-8 col-md-12 ">
+        <div class="row cards-alignment">
+          <div class="who-main-card-1 col-lg-2 col-md-2 col-sm-12 ">
+      <div class="who-card-main-text-img-1">
+        <div class="card-logo-img-1">
+          <img src=" assets/images/home/AllLogos-1.png" alt="">
+        </div>
+      <div class="card-logo-bg-1">
+          <p style="padding-top: 4%;">An advanced Software Quality Assurance (SQA) and Software Quality Engineering and Control (SQEC) dedicated to your business to achieve the highest standard of software performance, reliability and security.</p>
+      </div>
+        <div class="card-logo-text-1">
+           <a href="pages/flawless-services.html" class="explore-btn-1">  Explore <span class="arrow">→</span> </a>
+        </div>
+      </div>
+    </div>
+    <div class="who-main-card-2 col-lg-2  col-md-2 col-sm-12 ">
+      <div class="who-card-main-text-img-2">
+      <div class="card-logo-img-2">
+          <img src=" assets/images/home/AllLogos3.png" alt="">
+      </div>
+      <div class="card-logo-bg-2">
+       <p style="padding-top: 4%;">An advanced e-commerce platform development service focused on building scalable, customized online stores, that drive customer satisfaction and maximize business growth.</p>
+      </div>
+      <div class="card-logo-text-2">
+        <a href="pages/meerchanity-service.html" class="explore-btn-2"> Explore <span class="arrow">→</span></a>
+      </div>
+    </div>
+    </div>
+        <div class="who-main-card-3 col-lg-2 col-md-2 col-sm-12 ">
+            <div class="who-card-main-text-img-3">
+                <div class="card-logo-img-3">
+                  <img src=" assets/images/home/AllLogos-2.png" alt="">
+                </div>
+                <div class="card-logo-bg-3">
+                  <p style=" padding-top: 7%;">An advanced Software Quality Assurance (SQA) and Software Quality Engineering and Control (SQEC) dedicated to your business to achieve the highest standard of software performance, reliability and security.</p>
+                </div>
+                <div class="card-logo-text-3">
+                    <a href="pages/episode-service.html" class="explore-btn-3"> Explore <span class="arrow">→</span> </a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+
+ </div>
+
+
+<!-- our-client-section end -->
+ <div class="mobile-slider-container">
+        <h5 class="mobile-slider-heading">Our Clients</h5>
+        <h2 class="mobile-main-heading">Testimonials</h2>
+        
+  <div class="mobile-slider">
+   <div class="mobile-slider-track">
+    <div class="mobile-slide">
+      <p class="mobile-testimonial-text">"At KOT Enterprises, whether you’re working from home or the office, we equip you with the tools, technology, and trust you need to perform at your best. Our flexible work culture is rooted in autonomy, accountability, and mutual trust—empowering you to choose how you work while staying aligned with our goals and fostering strong collaboration and innovation."</p>
+      <p class="mobile-testimonial-author">- Sarah Johnson, Marketing Director</p>
+    </div>
+                
+     <div class="mobile-slide">
+        <p class="mobile-testimonial-text">"KOT Enterprises is redefining how we empower the military community. In collaboration with our partners, we take a comprehensive approach to equipping veterans and military personnel with the skills needed to thrive in high-impact, in-demand roles across the tech industry and beyond."</p>
+        <p class="mobile-testimonial-author">- Michael Chen, Tech Startup CEO</p>
+     </div>
+          <div class="mobile-slide">
+              <p class="mobile-testimonial-text">"The results speak for themselves. Our website traffic increased by 200% and conversion rates tripled since implementing their strategies. Highly recommended!"</p>
+              <p class="mobile-testimonial-author">- Emily Rodriguez, E-commerce Manager</p>
+          </div>
+                
+          <div class="mobile-slide">
+              <p class="mobile-testimonial-text">"We fundamentally believe that we need a culture founded in a growth mindset. It starts with a belief that everyone can grow and develop; that potential is nurtured, not pre-determined; and that anyone can change their mindset.&nbsp;"</p>
+              <p class="mobile-testimonial-author">- James Wilson, Creative Director</p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Swiper JS -->
+<!-- slider -->
+ <div class="container-fluid main-two-slider-image mt-4">
+
+
+<div class="dual-slider-container">
+ 
+
+  <!-- 30% Vertical Slider -->
+  <div class="vertical-slider">
+
+   
+  
+
+    <!-- Slider Track -->
+    <div class="v-slider-track">
+      <div class="v-card"> 
+        <h3>5+</h3>
+        <p>Awards Won</p>
+      </div>
+      <div class="v-card"> 
+        <h3>145+</h3>
+        <p>Happy Customer</p>
+      </div>
+      <div class="v-card"> 
+        <h3>352+</h3>
+        <p>After Sales Support</p>
+      </div>
+    
+      <div class="v-card"> 
+        <h3>5+</h3>
+        <p>Awards Won</p>
+      </div>
+      <div class="v-card"> 
+        <h3>145+</h3>
+        <p>Happy Customer</p>
+      </div>
+      <div class="v-card"> 
+        <h3>352+</h3>
+        <p>After Sales Support</p>
+      </div>
+    </div>
+
+    
+   
+
+    <!-- Side Images -->
+    <img src=" assets/images/home/home-fade-left.png" class="v-top-img" alt="">
+    <img src=" assets/images/home/slider-left.png" class="v-left-img" alt="">
+    <img src=" assets/images/home/slider-right.png" class="v-right-img" alt="">
+    <img src=" assets/images/home/home-fade-right.png" class="v-bottom-img" alt="">
+
+  </div>
+
+  <!-- 70% Horizontal Slider -->
+  
+  <div class="horizontal-slider-wrapper">
+
+    
+
+    <!-- Left Blur -->
+    <div class="h-blur-left">
+      <img src=" assets/images/home/home-fade-right.png" alt="">
+    </div> 
+
+    <!-- Slider Track -->
+    <div class="h-slider-track">
+      <div class="h-card">
+        <p>KOT Enterprises transformed our training program with their LMS Portal. The platform is intuitive, and our learners love it! </p>
+        <p class="author">Sara Ahmed, <br> <span class="author-text">EduTech Solutions</span> </p>
+      </div>
+      <div class="h-card">
+        <p>Our e-commerce business has seen a 40% increase in sales since working with KOT. Their team is professional and responsive.</p>
+       <p class="author">Ali Khan <br> <span class="author-text"> TrendyMart</span> </p>
+      </div>
+      <div class="h-card">
+      <p>The ERP system implemented by KOT made our operations seamless. We save hours of work every week.</p>
+        <p class="author">Fatima Riaz <br> <span class="author-text"> Global Manufacturing Co.</span> </p>
+      </div>
+    
+      <div class="h-card">
+        <p>KOT Enterprises transformed our training program with their LMS Portal. The platform is intuitive, and our learners love it! </p>
+        <p class="author">Sara Ahmed, <br> <span class="author-text">EduTech Solutions</span> </p>
+      </div>
+      <div class="h-card">
+        <p>Our e-commerce business has seen a 40% increase in sales since working with KOT. Their team is professional and responsive.</p>
+       <p class="author">Ali Khan <br> <span class="author-text"> TrendyMart</span> </p>
+      </div>
+      <div class="h-card">
+      <p>The ERP system implemented by KOT made our operations seamless. We save hours of work every week.</p>
+        <p class="author">Fatima Riaz <br> <span class="author-text"> Global Manufacturing Co.</span> </p>
+      </div>
+    </div>
+
+    <!-- Right Blur -->
+    <div class="h-blur-right">
+      <img src=" assets/images/home/home-fade-left.png" alt="">
+    </div> 
+
+  </div>
+  
+    
+</div>
+
+ </div>
+<!-- our blog-start -->
+ <!-- Our Blogs Section -->
+<section class="our-blog-section mt-4">
+  <div class="our-blog-container">
+    <h1 class="our-blog-heading">Our Blogs</h1>
+
+    <div class="our-blog-card-wrapper">
+
+      <!-- Card 1 -->
+      <div class="our-blog-card">
+        <h2>The Human Side of <br> Smart Tech: Why Ethics Matter in Innovation</h2>
+        <p>
+          In a world driven by algorithms and automation, ethical innovation is no longer optional it's
+          essential. At KOT Enterprises, we believe that technology should serve people, not replace them.
+          This blog dives into how human-centered design.
+        </p>
+        <div class="text-stmcs-btn-1" style="background-size: 100% 100%;
+    width: 120.42px;
+    height: 30.41px;
+    font-size: 10px;">
+  
+       <a href="pages/contact.html"> READ MORE </a>
+  
+    </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="our-blog-card">
+        <h2 style="margin-top: 5%;">Ways Smart Tech is Revolutionizing Customer Experience</h2>
+        <p>
+          Customers today expect more than just service they expect smart service. In this article, we
+          explore how AI, automation, and intelligent platforms are transforming customer journeys. From
+          personalized interactions to real-time support, discover five practical ways businesses.
+        </p>
+        <div class="text-stmcs-btn-1" style="background-size: 100% 100%;
+    width: 120.42px;
+    height: 30.41px;
+    font-size: 10px;">
+  
+       <a href="pages/contact.html"> READ MORE </a>
+  
+    </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="our-blog-card">
+        <h2 style="margin-top: 5%;">Building Solutions That Evolve with You: Inside KOT’s Development Philosophy</h2>
+        <p>
+          At KOT Enterprises, we don’t just create software — we build adaptable ecosystems designed to
+          grow with your business. This blog offers a behind-the-scenes look at our agile development
+          process, where flexibility, user feedback, and scalability guide.
+        </p>
+        <div class="text-stmcs-btn-1" style="background-size: 100% 100%;
+    width: 120.42px;
+    height: 30.41px;
+    font-size: 10px;">
+  
+       <a href="pages/contact.html"> READ MORE </a>
+  
+    </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- our-blog-end -->
+
+<!-- Your Journey Starts Here!-start -->
+ <div class="yjs-contact-slider-section">
+  <!-- Left Side Text -->
+  <div class="yjs-contact-left" style="margin-left: 1%;">
+    <h2>Your Journey Starts  Here!</h2>
+    <p class="yjs-subtitle">SMART SOLUTIONS ARE JUST A CLICK AWAY</p>
+    <p>
+      Are you looking for top-quality Business solutions tailored to your needs? Reach out to us.
+    </p>
+ <div class="yjs-contact-info-section">
+  <!-- Email Section -->
+  <div class="yjs-contact-item">
+    <img src=" assets/images/home/envelop.png" alt="Email Icon" class="yjs-icon">
+    <div class="yjs-contact-text">
+      <p class="yjs-label">Email</p>
+      <p><a href="mailto:meerannasir@kot-e.com">info@kot-e.com</a></p>
+    </div>
+  </div>
+
+  <!-- Phone Section -->
+  <div class="yjs-contact-item">
+    <img src=" assets/images/home/phone.png" alt="Phone Icon" class="yjs-icon-2">
+    <div class="yjs-contact-text">
+      <p class="yjs-label">Phone Number</p>
+      <p><a href="tel:+16317781880">03041110427</a></p>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- Right Side: Vertical Slider + AI Robot -->
+  <div class="yjs-contact-right">
+
+    <!-- Vertical Slider Container -->
+    <div class="yjs-vertical-slider-container">
+
+      
+
+      <!-- Fade Top as Image -->
+      <img src=" assets/images/home/home-fade-left.png" class="yjs-v-fade-top" alt="Fade Top">
+
+      <!-- Slider Track -->
+      <div class="yjs-v-slider-track">
+          <div class="yjs-v-slide-1"><p>Hey there! 👋 I’m KOT’s smart 
+  assistant, here to guide you through anything you need fast, simple, and stress-free. Whether you’re curious about our services, need support, or just want to say hi, I’ve got you covered! 
+  ➡️ How can I help today?</p></div>
+        <div class="yjs-v-slide-2"><p>
+          Type Here....
+        </p></div>
+       
+      
+          <div class="yjs-v-slide-1"><p>Hey there! 👋 I’m KOT’s smart 
+  assistant, here to guide you through anything you need fast, simple, and stress-free. Whether you’re curious about our services, need support, or just want to say hi, I’ve got you covered! 
+  ➡️ How can I help today?</p></div>
+        <div class="yjs-v-slide-2"><p>
+          Type Here....
+        </p></div>
+       
+      
+          <div class="yjs-v-slide-1"><p>Hey there! 👋 I’m KOT’s smart 
+  assistant, here to guide you through anything you need fast, simple, and stress-free. Whether you’re curious about our services, need support, or just want to say hi, I’ve got you covered! 
+  ➡️ How can I help today?</p></div>
+        <div class="yjs-v-slide-2"><p>
+          Type Here....
+        </p></div>
+       
+      </div>
+
+      <!-- Fade Bottom as Image -->
+      <img src=" assets/images/home/home-fade-right.png" class="yjs-v-fade-bottom" alt="Fade Bottom">
+
+    
+
+    </div>
+
+    <!-- AI Robot -->
+    <div class="yjs-ai-robot">
+      <img src=" assets/images/home/yjs-Ai-robot.png" alt="AI Robot">
+    </div>
+
+  </div>
+</div>
+<!-- Your Journey end Here!  -->
+
+ <!-- Footer -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-md-4 col-12">
+                        <p>
+                            This website is authorized for office use externally or internally marked or addressed
+                            medium copying or posting is an infringement. This website may not be addressed or otherwise
+                            reproduced, posted or transmitted, without the permission of the Chief Executive Officer at
+                            KOT ENTERPRISES (PRIVATE) LIMITED.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-12 d-flex align-items-center justify-content-center">
+                        <p style="font-size: 15px;">© 2025 KOT Enterprises. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-4 col-12 d-flex align-items-center justify-content-md-end justify-content-center">
+                       
+<a href="https://www.facebook.com/share/19DBLw7Y7x/?mibextid=wwXIfr"> <i class="fab fa-facebook-f social-icon"></i> </a>
+<a href="https://www.instagram.com/kotglobal?igsh=eHFrMnl1dmFhZWZ4&amp;utm_source=qr"><i class="fab fa-instagram social-icon"></i></a>
+       
+<a href="https://www.linkedin.com/company/kotenterprises/"><i class="fab fa-linkedin-in social-icon"></i></a>
+    </div>
+                </div>
+            </div>
+        </footer>  </div>
+        <!--Chat Bot Code-->
+<button class="chat-launcher" id="chatOpen" aria-label="Open chat">💬</button>
+
+  <div class="chatbox" id="chatBox" aria-live="polite">
+    <div class="chatbox-header">Assistant</div>
+    <div class="chatbox-messages" id="messages">
+      <div class="msg bot"><div class="bubble">Welcome to KOT Enterprises! We’re so glad you’re here. At KOT, our mission is to build technology that empowers people, drives innovation, and creates lasting impact.<br> Think of me as your friendly guide to everything KOT. What would you like to explore first?</div></div>
+    </div>
+    <div class="chatbox-input">
+      <input id="userInput" type="text" placeholder="Apna sawal likhein...">
+      <button id="sendBtn">Send</button>
+    </div>
+    <div class="hint" style="padding:0 10px 10px;">Tip: Ask about company services”</div>
+  </div>
+  <script src="assets/js/chatbot.js"></script>
+  <!--Chatbot Code Ends here-->
+
+    <script src="script.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+     // check our single image slider
+   // Swiper initialization
+var oucSwiper = new Swiper('.ouc-swiper-container', {
+  loop: true,
+  autoplay: { 
+    delay: 2000,
+    disableOnInteraction: false // hover ke baad autoplay resume karne ke liye zaroori
+  },
+  speed: 2000,
+  slidesPerView: 1.2,
+  spaceBetween: 50,
+  navigation: {
+    nextEl: '.ouc-swiper-button-next',
+    prevEl: '.ouc-swiper-button-prev'
+  }
+});
+
+// Get swiper container element
+const swiperEl = document.querySelector('.ouc-swiper-container');
+
+// Hover pe pause
+swiperEl.addEventListener('mouseenter', function() {
+  oucSwiper.autoplay.stop();
+});
+
+// Mouse leave pe resume
+swiperEl.addEventListener('mouseleave', function() {
+  oucSwiper.autoplay.start();
+});
+
+// Horizontal Duplicate
+const hTrack = document.querySelector(".h-slider-track");
+if (hTrack) {
+  hTrack.innerHTML += hTrack.innerHTML;
+}
+
+// Vertical Duplicate
+const vTrack = document.querySelector(".v-slider-track");
+if (vTrack) {
+  vTrack.innerHTML += vTrack.innerHTML;
+}
+
+
+// yjs slider 
+// yjs slider 
+const sliderTrack = document.querySelector(".yjs-v-slider-track");
+let scrollSpeed = 0.5; // pixels per frame
+let isHovered = false;
+
+// Duplicate slides enough times for smooth loop
+sliderTrack.innerHTML += sliderTrack.innerHTML + sliderTrack.innerHTML;
+
+// Continuous scroll
+function autoScroll() {
+  if (!isHovered) {
+    sliderTrack.scrollTop += scrollSpeed;
+
+    // If we've scrolled past one full set, reset without flicker
+    const singleSetHeight = sliderTrack.scrollHeight / 3; 
+    if (sliderTrack.scrollTop >= singleSetHeight) {
+      sliderTrack.scrollTop -= singleSetHeight;
+    }
+  }
+  requestAnimationFrame(autoScroll);
+}
+
+// Hover pause
+sliderTrack.addEventListener("mouseenter", () => {
+  isHovered = true;
+});
+sliderTrack.addEventListener("mouseleave", () => {
+  isHovered = false;
+});
+
+// Start
+autoScroll();
+     
+            function toggleNav() {
+                document.getElementById('navLinks').classList.toggle('show');
+            }
+            function toggleMega() {
+                document.getElementById('megaMenu').classList.toggle('show');
+            }
+
+
+     window.onload = function () {
+            // Hide the preloader after 3 seconds
+            setTimeout(function () {
+                document.getElementById('preloader').style.opacity = '0';
+                document.getElementById('content').style.display = 'block';
+                
+                // Remove the preloader from the DOM after fade out
+                setTimeout(function () {
+                    document.getElementById('preloader').style.display = 'none';
+                }, 500);
+            }, 3000); // Preloader will disappear after 3 seconds
+        };
+   // Toggle nav menu
+      function toggleNav() {
+        document.getElementById('navLinks').classList.toggle('show');
+      }
+
+      // Toggle crown mega menu
+      function toggleMega() {
+        document.getElementById('megaMenu').classList.toggle('show');
+        // Close hamburger mega menu if open
+        document.getElementById('hamburgerMegaMenu').classList.remove('show');
+      }
+      
+      // Toggle hamburger mega menu
+      function toggleHamburgerMega() {
+        document.getElementById('hamburgerMegaMenu').classList.toggle('show');
+        // Close crown mega menu if open
+        document.getElementById('megaMenu').classList.remove('show');
+      }
+      
+      // Toggle dropdowns in hamburger mega menu
+      function toggleHamburgerDropdown(element) {
+        const dropdown = element.nextElementSibling;
+        const icon = element.querySelector('i');
+        
+        dropdown.classList.toggle('show');
+        
+        // Rotate caret icon
+        if (dropdown.classList.contains('show')) {
+          icon.classList.remove('fa-caret-down');
+          icon.classList.add('fa-caret-up');
+        } else {
+          icon.classList.remove('fa-caret-up');
+          icon.classList.add('fa-caret-down');
+        }
+      }
+
+      // Close menus when clicking outside
+      document.addEventListener('click', function(event) {
+        const megaMenu = document.getElementById('megaMenu');
+        const hamburgerMegaMenu = document.getElementById('hamburgerMegaMenu');
+        const crownBtn = document.querySelector('.crownbtn');
+        const hamburgerBtn = document.querySelector('.hamburger');
+        
+        // Close mega menu if clicked outside
+        if (megaMenu.classList.contains('show') && 
+            !megaMenu.contains(event.target) && 
+            !crownBtn.contains(event.target)) {
+          megaMenu.classList.remove('show');
+        }
+        
+        // Close hamburger mega menu if clicked outside
+        if (hamburgerMegaMenu.classList.contains('show') && 
+            !hamburgerMegaMenu.contains(event.target) && 
+            !hamburgerBtn.contains(event.target)) {
+          hamburgerMegaMenu.classList.remove('show');
+        }
+      });
+
+      // Handle dropdowns on mobile
+      document.addEventListener('DOMContentLoaded', function () {
+        const navItems = document.querySelectorAll('.nav-links > li');
+        navItems.forEach(item => {
+          item.addEventListener('click', function (e) {
+            if (window.innerWidth <= 767) {
+              e.preventDefault(); 
+              navItems.forEach(i => {
+                if (i !== item) i.classList.remove('open');
+              });
+              item.classList.toggle('open');
+            }
+          });
+        });
+      });
+
+      // Toggle nav menu
+      function toggleNav() {
+        document.getElementById('navLinks').classList.toggle('show');
+      }
+
+      // Toggle crown mega menu
+      function toggleMega() {
+        document.getElementById('megaMenu').classList.toggle('show');
+        // Close hamburger mega menu if open
+        document.getElementById('hamburgerMegaMenu').classList.remove('show');
+      }
+      
+      // Toggle hamburger mega menu
+      function toggleHamburgerMega() {
+        document.getElementById('hamburgerMegaMenu').classList.toggle('show');
+        // Close crown mega menu if open
+        document.getElementById('megaMenu').classList.remove('show');
+      }
+      
+      // Toggle dropdowns in hamburger mega menu
+      function toggleHamburgerDropdown(element) {
+        const dropdown = element.nextElementSibling;
+        const icon = element.querySelector('i');
+        
+        dropdown.classList.toggle('show');
+        
+        // Rotate caret icon
+        if (dropdown.classList.contains('show')) {
+          icon.classList.remove('fa-caret-down');
+          icon.classList.add('fa-caret-up');
+        } else {
+          icon.classList.remove('fa-caret-up');
+          icon.classList.add('fa-caret-down');
+        }
+      }
+
+      // Close menus when clicking outside
+      document.addEventListener('click', function(event) {
+        const megaMenu = document.getElementById('megaMenu');
+        const hamburgerMegaMenu = document.getElementById('hamburgerMegaMenu');
+        const crownBtn = document.querySelector('.crownbtn');
+        const hamburgerBtn = document.querySelector('.hamburger');
+        
+        // Close mega menu if clicked outside
+        if (megaMenu.classList.contains('show') && 
+            !megaMenu.contains(event.target) && 
+            !crownBtn.contains(event.target)) {
+          megaMenu.classList.remove('show');
+        }
+        
+        // Close hamburger mega menu if clicked outside
+        if (hamburgerMegaMenu.classList.contains('show') && 
+            !hamburgerMegaMenu.contains(event.target) && 
+            !hamburgerBtn.contains(event.target)) {
+          hamburgerMegaMenu.classList.remove('show');
+        }
+      });
+
+      // Handle dropdowns on mobile
+      document.addEventListener('DOMContentLoaded', function () {
+        const navItems = document.querySelectorAll('.nav-links > li');
+        navItems.forEach(item => {
+          item.addEventListener('click', function (e) {
+            if (window.innerWidth <= 767) {
+              e.preventDefault(); 
+              navItems.forEach(i => {
+                if (i !== item) i.classList.remove('open');
+              });
+              item.classList.toggle('open');
+            }
+          });
+        });
+      });
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: white;
+      min-height: 100vh;
+    }
+
+    /* FAQ wrapper */
+    main.faq-wrapper {
+      display: flex;
+      min-height: 100vh;
+      background-image: url('../assets/images/Audit/crown.png');
+      background-size: 100% 100%;
+      background-position: center;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #111;
+      width: 280px;
+      min-width: 200px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar h3 {
+      color: #ddd;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .sidebar button {
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      text-align: left;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sidebar button:hover {
+      background-color: #222;
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: #0074D9;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Main content */
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .main h1 {
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    .main h1 span {
+      color: #0074D9;
+    }
+
+    .main p {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+
+    .search-box {
+      margin-top: 20px;
+      background-color: #111;
+      color: #aaa;
+      border: none;
+      padding: 16px 20px;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .sidebar {
+        position: fixed;
+        left: -280px;
+        height: 100vh;
+        z-index: 999;
+        overflow-y: auto;
+      }
+      
+      .sidebar.active {
+        left: 0;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .main {
+        width: 100%;
+        padding: 80px 20px 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main h1 {
+        font-size: 36px;
+      }
+
+      .main p {
+        font-size: 20px;
+      }
+
+      .search-box {
+        width: 90%;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sidebar {
+        width: 100%;
+        left: -100%;
+      }
+      
+      .sidebar button {
+        padding: 10px;
+        font-size: 14px;
+        white-space: normal;
+      }
+
+      .main h1 {
+        font-size: 28px;
+      }
+
+      .main p {
+        font-size: 16px;
+      }
+
+      .search-box {
+        padding: 12px;
+      }
+    }

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why KOT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat, sans-serif;
+            background-color: black;
+        }
+
+        .main {
+            background-color: #1e1e1e;
+            padding: 10px 0;
+            margin-top: -60px;
+        }
+
+        .why-kot,
+        .core-values-section,
+        .our-impact {
+            background-image: url('Crown.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            /* background-color: black; */
+            min-height: 100vh;
+            margin-bottom: 20px;
+        }
+
+        .why-kot,
+        .our-impact {
+            display: flex;
+            align-items: center;
+        }
+
+        .why-kot h1 {
+            color: #0C72BA;
+            font-weight: 900;
+            font-size: 3rem;
+        }
+
+
+
+        .why-kot p {
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 112%;
+            color: #ffffff;
+        }
+
+        .core-values-section {
+            padding-top: 100px;
+            padding-bottom: 60px;
+        }
+
+        .heading-over-images {
+            color: #0c72ba;
+            margin-bottom: 10px;
+            font-weight: 800;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .core-value-box {
+           height: 379px; width: 323px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Center vertically */
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .core-value-title {
+            color: #0c72ba;
+            font-size: 27px;
+            font-weight: 900;
+            /* margin-bottom: 10px; */
+        }
+
+        .core-value-text {
+            font-size: 16px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+
+        .our-impact h2 {
+
+            color: #0C72BA;
+            font-weight: 800;
+            font-size: 32px;
+            /* width: 1000px; */
+
+        }
+
+        .our-impact p {
+            font-weight: 400;
+            font-size: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .why-kot h1 {
+                font-size: 35px;
+            }
+
+            .why-kot p {
+                font-size: 17px;
+            }
+
+            .heading-over-images {
+                font-size: 2rem;
+            }
+
+            .core-value-box {
+                height: auto;
+                padding: 30px 20px;
+
+            }
+
+            .core-value-title {
+                margin-top: 0;
+            }
+
+            .core-value-text {
+                width: 100%;
+            }
+
+            .our-impact h2,
+            .our-impact p {
+                width: auto;
+                font-size: 18px;
+            }
+
+            .our-impact p {
+                font-size: 12px;
+            }
+
+
+
+
+        }
+
+        /* last section */
+
+
+        .item-block {
+            display: flex;
+            align-items: center;
+            margin-right: 125px;
+            /* Spacing between blocks */
+        }
+
+        .item-block img {
+
+            margin-right: 10px;
+        }
+
+        .container-flex {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 20px;
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+ 
+     .footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 0px 20px; /* reduced padding */
+  margin-bottom: -40px;
+}
+
+.footer p {
+  margin-bottom: 0;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.social-icon {
+  margin-right: 8px;
+  font-size: 16px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .footer .row > div {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+
+        .logo img {
+            height: 50px
+        }
+
+        /* Center links */
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            justify-content: center;
+            transition: max-height .3s ease;
+        }
+
+        .nav-links li {
+            list-style: none;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .nav-links li:hover>a {
+            color: #0af
+        }
+
+        .nav-links ul {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #111;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            min-width: 160px;
+            z-index: 10;
+        }
+
+        .nav-links li:hover>ul {
+            display: block
+        }
+
+        .nav-links ul li {
+            margin-bottom: 6px
+        }
+
+        .nav-links ul li:last-child {
+            margin-bottom: 0
+        }
+
+        .nav-links ul a:hover {
+            color: #0af
+        }
+
+        /* Right side */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-right button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-right img.flag {
+            width: 18px
+        }
+
+        /* Mega-menu */
+        .mega-menu {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            display: none;
+            width: 90%;
+            max-width: 1000px;
+            z-index: 1000;
+        }
+
+        .mega-menu.show {
+            display: block
+        }
+
+        .mega-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .mega-col {
+            flex: 1 1 150px;
+        }
+
+        .mega-col h4 {
+            margin-bottom: 8px;
+            font-size: 16px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 4px;
+        }
+
+        .mega-col ul {
+            list-style: none
+        }
+
+        .mega-col li {
+            margin-bottom: 6px
+        }
+
+        .mega-col a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .mega-col a:hover {
+            color: #0af
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            font-size: 22px;
+            background: none;
+            border: none;
+            color: #fff;
+        }
+
+        /* MOBILE */
+        @media(max-width:992px) {
+            .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #000;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .nav-links.show {
+                max-height: 500px;
+            }
+
+            .nav-links li {
+                width: 100%
+            }
+
+            .nav-links ul {
+                position: static;
+                box-shadow: none;
+                background: #111;
+                margin-left: 10px;
+            }
+
+            .mega-menu {
+                position: static;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .mega-content {
+                flex-direction: column;
+            }
+
+            .mega-col {
+                flex: 1 1 100%
+            }
+
+            .hamburger {
+                display: block
+            }
+        }
+
+
+
+        
+.marqueeajust{
+    height: 100% !important;
+    width: 100%;
+    margin-left: -11%;
+}
+.marqueeajustright{
+    height: 100% !important;
+    width: 100%;
+        margin-left: 13%;
+}
+/* marquee section css */
+.marquee-wrapper
+{
+  width: 1140px;
+  transform: translateY(-10px);
+  margin-left: 7.5%;
+}
+.marquee-text{
+    color: white;
+}
+.marquee-text-container {
+ 
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.marquee-text-track {
+  display: flex;
+  animation: scroll-loop 20s linear infinite;
+}
+
+.marquee-text {
+  flex-shrink: 0;
+  color: white;
+  padding-right: 100px; /* Space between repetitions */
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+    </style>
+</head>
+
+<body>   <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="KOT Logo" style="height: 50px;">
+        </div>
+
+        <!-- Center nav -->
+        <ul class="nav-links" id="navLinks" style="padding-top: 12px;">
+            <li>
+                <a href="#">Corporate <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Leadership</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Careers <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Internships</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Web & App Dev</a></li>
+                    <li><a href="#">SEO & Marketing</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Consultancy <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Strategy</a></li>
+                    <li><a href="#">Legal & Compliance</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Marketplace <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">SaaS Tools</a></li>
+                    <li><a href="#">E-commerce</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Programs <i class="fas fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="#">Xcelerator</a></li>
+                    <li><a href="#">Merchanity</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Right icons -->
+        <div class="nav-right">
+            <button><img src="https://www.worldometers.info/img/flags/uk-flag.gif" class="flag" alt=""> English</button>
+            <button><i class="fas fa-shopping-cart"></i> Cart</button>
+            <button><i class="fas fa-user"></i> Sign In</button>
+            <button onclick="toggleMega()"><i class="fas fa-crown"></i></button>
+            <button class="hamburger" onclick="toggleNav()"><i class="fas fa-th"></i></button>
+        </div>
+
+        <!-- Mega menu -->
+        <div class="mega-menu" id="megaMenu">
+            <div class="mega-content">
+                <!-- Column 1 -->
+                <div class="mega-col">
+                    <h4>App Sculpt</h4>
+                    <ul>
+                        <li><a href="#">Native Mobile App (Android)</a></li>
+                        <li><a href="#">Native Mobile App (iOS)</a></li>
+                        <li><a href="#">Flutter App Development</a></li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div class="mega-col">
+                    <h4>App Sculpt</h4>
+                    <ul>
+                        <li><a href="#">Software as a Service</a></li>
+                        <li><a href="#">Point of Sales</a></li>
+                        <li><a href="#">Ecommerce Platforms</a></li>
+                        <li><a href="#">Healthcare Systems</a></li>
+                        <li><a href="#">LMS & ERP Systems</a></li>
+                        <li><a href="#">Inventory & HRM Systems</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div class="mega-col">
+                    <h4>Digittrail</h4>
+                    <ul>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Content Marketing</a></li>
+                        <li><a href="#">PPC Marketing</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Branding & Audit</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div class="mega-col">
+                    <h4>Graphiora</h4>
+                    <ul>
+                        <li><a href="#">Logo & Brand Identity</a></li>
+                        <li><a href="#">Print & Digital Design</a></li>
+                        <li><a href="#">Web & UI/UX Design</a></li>
+                        <li><a href="#">Packaging Design</a></li>
+                    </ul>
+                </div>
+                <!-- Column 5 -->
+                <div class="mega-col">
+                    <h4>Web Sculptures</h4>
+                    <ul>
+                        <li><a href="#">Custom Website Dev</a></li>
+                        <li><a href="#">Front & Backend Dev</a></li>
+                        <li><a href="#">API Integration</a></li>
+                        <li><a href="#">Maintenance & Support</a></li>
+                        <li><a href="#">Market Research</a></li>
+                    </ul>
+                </div>
+                <!-- Column 6 -->
+                <div class="mega-col">
+                    <h4>Venture Xcelerator</h4>
+                    <ul>
+                        <li><a href="#">Mentorship & Coaching</a></li>
+                        <li><a href="#">Business Strategy</a></li>
+                        <li><a href="#">Networking & Partnerships</a></li>
+                        <li><a href="#">Funding & Investment</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+
+
+       <!-- Marquee Section with Side Images on Left & Right -->
+<div class="marquee-wrapper  position-relative d-flex align-items-center overflow-hidden" 
+style="height: 45px;">
+  
+  <!-- Left Image -->
+  <div class="position-absolute start-0 top-0 bottom-0 z-2 d-flex align-items-center ">
+    <img src="rightmarquee.png" alt="Left" class="marqueeajust" />
+  </div>
+
+  <!-- Scrolling Text -->
+    <div class="marquee-text-container flex-grow-1 px-5">
+    <div class="marquee-text-track">
+        <div class="marquee-text fw-bold">
+        <span>
+            <img src="marqueetextlogo.png" alt="">
+        </span>
+        KOT Enterprises priorities cultural values and well being of work spaces. Therefore staff will be visiting Siran Valley.
+        </div>
+        <div class="marquee-text fw-bold">
+        <span>
+            <img src="marqueetextlogo.png" alt="">
+        </span>
+        KOT Enterprises priorities cultural values and well being of work spaces. Therefore staff will be visiting Siran Valley.
+        </div>
+    </div>
+    </div>
+
+
+
+  <!-- Right Image -->
+  <div class="position-absolute end-0 top-0 bottom-0 z-2 d-flex align-items-center ">
+    <img src="leftmarquee .png" alt="Right" class="marqueeajustright" style="margin-right: 11%;"/>
+  </div>
+
+</div>
+
+    <div class="container-fluid main"> </div>
+ 
+    <div class="container-fluid main">
+        <!-- Why KOT Enterprises Section -->
+        <div class="container-fluid why-kot" >
+            <div class="container " style="height:400px; ">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h1 class="mb-4 mt-1" style="font-size: 52px;">Why KOT <br> Enterprises?</h1>
+                        <br>
+                        <p style="font-size: 22px; width: 690px; ">
+                            At KOT Enterprises, we prioritize understanding your needs <br>
+                            and delivering tailored digital solutions powered by smart <br>
+                            technology. With our clients at the heart of everything we <br>
+                            do, we strive to create meaningful, impactful outcomes. <br>
+                            We turn challenges into opportunities, shaping a world <br>
+                            where digital innovation seamlessly drives progress.
+                        </p>
+                        <br>
+                        <img src="Group 2079 (1).png" alt="KOT Graphic" class="img-fluid mt-4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Values Section -->
+        <div class="container-fluid core-values-section">
+            <div class="container text-center">
+                <h1 class="fw-bold heading-over-images" style="font-size: 62px;">Our Core Values</h1>
+                <div class="row justify-content-center g-4" style="margin-top: 30px">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="core-value-box" style="background-image: url('1.png'); height: 380px; width: 324px;">
+                            <h1 class="core-value-title" style="margin-top: 105px; font-size: 27px;">Innovation</h1>
+                            <p class="core-value-text" style="padding: 0 22px; font-size: 16px; ">
+                                We continuously integrate <br> the latest and most  <br>reliable technologies into <br> our digital
+                                solutions to <br> stay ahead in a fast- <br>evolving landscape.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="core-value-box" style="background-image: url('2.png');">
+                            <h1 class="core-value-title" style="margin-top:     105px;">Integrity</h1>
+                            <p class="core-value-text" style=" font-size: 16px;">
+                                Guided by honesty and  <br>trust, we dedicate our  <br>time and expertise to  <br>delivering the most
+                               <br> effective  solutions to <br> your challenges.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="core-value-box" style="background-image: url('3.png');">
+                            <h1 class="core-value-title" style="margin-top: 105px;">Impact</h1>
+                            <p class="core-value-text" style="padding: 0 22px;">
+                                We envision a <br>sustainable digital <br> world—one where  <br>technology enhances, <br> rather than
+                                replaces, <br> the human experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="core-value-box" style="background-image: url('4.png');">
+                            <h1 class="core-value-title" style="margin-top: 105px;">Collaboration</h1>
+                            <p class="core-value-text" style="padding: 0 22px;">
+                                We believe in the power <br> of teamwork, thriving  <br>through shared ideas <br> and collective effort
+                                to <br> achieve greater  <br> outcomes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- our impact section -->
+
+        <div class="container-fluid our-impact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h2 class="mb-3 mt-4" style="font-weight: 800; font-size: 62px;">Our Impact</h2>
+                        <p >
+                            Our commitment to innovation, integrity, and excellence translates into tangible results. We
+                            are proud to have  served 145+ satisfied clients, providing them with solutions that
+                            guarantee success. Our dedication extends far  beyond delivery, with 345+ instances of
+                            after-sales support ensuring sustained client satisfaction. This  commitment to quality and
+                            service has also been recognized with 5+ industry awards won
+                        </p>
+                        <h2 class="mb-3 mt-3">Innovation Beyond Limits, Where Ideas Take Flight.</h2>
+                        <p>We proactively integrate emerging technologies like AI, ML, and Generative AI, ensuring our
+                            clients are always  ahead. Our dedicated R&D fosters continuous breakthroughs, turning
+                            complex problems into competitive  advantages. Your problems, our solutions; a timeless
+                            combination.</p>
+                        <h2 class="mb-3  mt-3">Reimagining Industries Through Technology;Transforming <br>Sectors,
+                            Empowering Businesses.</h2>
+                        <p>Our vision extends across diverse industries, from healthcare to e-commerce, redefining
+                            efficiency and engagement. We tailor our technological prowess to each client's unique
+                            needs, ensuring scalable and relevant solutions. Our success stories demonstrate how our
+                            innovative tech drives tangible business outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- last section -->
+        <div class="container-fluid our-impact">
+            <div class="container"  >
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h2 class="mb-4 " style="font-weight: 800; font-size: 52px;">An Future to Look Forward to
+                        </h2>
+                        <p>
+                            In this Era of Technology, it is extremely important to be cautious. We prioritize ethical
+                            AI and transparent development, creating powerful solutions beneficial to society. Our
+                            diverse team collaborates to deliver excellence. We build enduring partnerships, guiding
+                            clients through today's trends and preparing them for tomorrow's technological landscape
+                            while making sure that their data is secure and free from any risks.</p>
+                        <h2 class="mb-5  mt-5">Join us in reimagining what's possible. Let's build your <br>future,
+                            together.</h2>
+
+                        <div class="container-flex">
+                            <div class="item-block">
+                                <img src="Vector.png" alt="Image 1" />
+                                <div class="text">Contact Our Team Today</div>
+                            </div>
+
+                            <div class="item-block">
+                                <img src="Vector.png" alt="Image 2" />
+                                <div class="text"> Explore Our Comprehensive Services</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              
+
+
+
+            </div>
+             
+        </div>
+        <!-- Footer -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-md-4 col-12">
+          <p>
+            This website is authorized for office use externally or internally marked or addressed medium copying or posting is an infringement. This website may not be addressed or otherwise reproduced, posted or transmitted, without the permission of the Chief Executive Officer at KOT ENTERPRISES (PRIVATE) LIMITED.
+          </p>
+        </div>
+        <div class="col-md-4 col-12 d-flex align-items-center justify-content-center">
+          <p>&copy; 2019 KOT Enterprises. All rights reserved.</p>
+        </div>
+        <div class="col-md-4 col-12 d-flex align-items-center justify-content-md-end justify-content-center">
+          <i class="fab fa-facebook-f social-icon"></i>
+          <i class="fab fa-instagram social-icon"></i>
+          <i class="fab fa-twitter social-icon"></i>
+          <i class="fab fa-linkedin-in social-icon"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+          <script>
+            function toggleNav() {
+                document.getElementById('navLinks').classList.toggle('show');
+            }
+            function toggleMega() {
+                document.getElementById('megaMenu').classList.toggle('show');
+            }
+        </script>
+</body>
+
+</html>

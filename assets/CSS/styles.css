@@ -334,14 +334,6 @@ height: 45px !important;
 }
 
 
-
-/* marquee section css end *Thank you for your business! We look forward to working with you again.
-
-/* marquee section css end */
-/* Because impact matters section start  */
-   /* Section Background */
-   /* Background full width */
-     /* Background full width */
 .impact-mater-bg {
   background: url('../images/Career-Home-page-Images/impact-mater-bg-image.png') no-repeat center center;
   background-size: 100% 100%;
@@ -2099,85 +2091,3 @@ text-align: justify;
 padding-right: 5%;
 
 }
-/* Main container with background image and overlay */
-.epi-slider-bg{
-  background-image: url(../images/Eppisode-image/pe-bg-img.png);
-  background-size: 100% 100%;
-  height: auto;
-}
-    .epi-main-container {
-      position: relative;
-      width: 100%;
-      height: 500px;
-      padding: 20px;
-      overflow: hidden;
-      background-color: rgba(0,0,0,0.5);
-    }
-
-    /* Background image */
-    .epi-main-container::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url('../images/Eppisode-image/epi-white-img.png'); /* Add your background image */
-      background-size:100% 100%;
-      background-position: center;
-      z-index: -1;
-    }
-
-    /* Swiper Wrapper */
-    .swiper-wrapper{
-    
-    }
-    .epi-swiper {
-
-      width: 100%;
-      height: 100%;
-    }
-
-    .epi-swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      background-color: #f0f0f0;
-    }
-
-    /* Bottom-right card on slide */
-    .epi-slide-card {
-      position: absolute;
-      bottom: -15px;
-      right: 20px;
-      background: #0C72BA;
-      color: #fff;
-      padding: 15px 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 235px;
-      height: 238px;
-      font-size: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    /* Swiper arrows */
-    .epi-swiper-button-next,
-    .epi-swiper-button-prev {
-      color: #0C72BA;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      /* .epi-main-container {
-        height: 250px;
-      }
-      .epi-slide-card {
-        font-size: 14px;
-        width: 200px;
-        height: 210px;
-        padding: 12px 20px;
-      } */
-    }
-/* KOT's Early in Profession experience-end */

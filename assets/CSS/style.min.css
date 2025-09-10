@@ -1676,6 +1676,14 @@ width: 100% !important;
        .yjs-ai-robot{
         padding-left: 22%;
        }
+
+
+       .main-two-slider-image {
+    background-image: url(../images/home/home-bg-img.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 50px 20px;
+}
         }
 
 

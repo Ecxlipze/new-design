@@ -367,7 +367,7 @@ body {
       .hamburger-dropdown.show {
         display: block;
         opacity: 1;
-        max-height: 560px;
+        max-height: 560px !important;
       }
 
       .hamburger-dropdown li {

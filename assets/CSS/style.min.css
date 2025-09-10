@@ -637,6 +637,7 @@ font-family: Montserrat;
 }
 .cards-alignment {
   gap: 15px !important;
+  justify-content: center;
 }
 .who-main-card-1
 {

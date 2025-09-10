@@ -1,6 +1,4 @@
-/* ============================= */
-/* 1. Root Variables             */
-/* ============================= */
+
 :root {
   --primary-color: #068A4F;
   --secondary-color: #fff;
@@ -11,9 +9,6 @@
   --transition-speed: 0.3s;
 }
 
-/* ============================= */
-/* 2. Global Styles              */
-/* ============================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -52,10 +47,6 @@ input, textarea {
   border: none;
   resize: none;
 }
-
-/* ============================= */
-/* 3. Navbar / Header            */
-/* ============================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -94,10 +85,6 @@ input, textarea {
   background: none;
   color: var(--secondary-color);
 }
-
-/* ============================= */
-/* 4. Hero / Main Sections       */
-/* ============================= */
 .iutp-text h1 {
   font-size: clamp(24px, 5vw, 42px);
   text-align: center;
@@ -141,9 +128,6 @@ input, textarea {
   margin-top: clamp(1rem, 2vw, 2rem);
 }
 
-/* ============================= */
-/* 5. Cards Section              */
-/* ============================= */
 .kot-card-main-heading h2,
 .living-card-main-heading h2,
 .kot-card-main-heading-c5 h2 {
@@ -179,9 +163,6 @@ input, textarea {
   transform: translateY(-5px);
 }
 
-/* ============================= */
-/* 6. Buttons / Forms             */
-/* ============================= */
 .btn-blue-human,
 .btn-white-human,
 .form-button {
@@ -217,9 +198,6 @@ input, textarea {
   margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
 }
 
-/* ============================= */
-/* 7. Images / People Section     */
-/* ============================= */
 .ccoc-people-img,
 .itr-ccoc-people-img,
 .power-ceo-img {
@@ -228,10 +206,6 @@ input, textarea {
   object-fit: cover;
   border-radius: clamp(8px, 1vw, 12px);
 }
-
-/* ============================= */
-/* 8. Footer Section             */
-/* ============================= */
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -239,7 +213,7 @@ input, textarea {
   text-align: center;
   padding: clamp(1rem, 3vw, 2rem);
   gap: clamp(0.5rem, 2vw, 1rem);
-  background-color: #000;
+  background-color: #212121;
 }
 
 .footer-left,
@@ -248,10 +222,6 @@ input, textarea {
   flex: 1 1 100%;
   margin-bottom: clamp(1rem, 2vw, 1rem);
 }
-
-/* ============================= */
-/* 9. Responsive Media Queries    */
-/* ============================= */
 
 /* Small Mobile */
 @media (max-width: 767px) {

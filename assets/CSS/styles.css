@@ -325,86 +325,9 @@ height: 45px !important;
   
 }
 
-.iutp-text h1{
-  font-family: Montserrat;
-font-weight: 800;
-font-style: ExtraBold;
-font-size: 42px;
-
-line-height: 112.00000000000001%;
-letter-spacing: 0%;
-color: #0A71B9;
-padding-left: 5.17%;
-}
 
 
 
-
-    /* Main background */
-    /* Section background */
-/* Main background */
-    .cultre-attribute-bg {
-      background-image: url(../images/culture-image/culture-bg-img.png);
-      background-size: 100% 100%;
-      height: auto;
-    }
-
-    /* Row single line */
-    .cultre-attribute-bg .row {
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: flex-end; /* bottom alignment */
-    }
-
-    /* Left Column */
-    .culture-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding-bottom: 30px;
-      height: 665px;
-      width: 40.33%;
-      padding-left: 4.17%;
-    }
-
-    .culture-attribute-text h2 {
-      font-family: Montserrat, sans-serif;
-      font-weight: 900;
-      font-size: 32px;
-      line-height: 100%;
-      color: #0A71B9;
-      max-width: 440px;
-      padding-left: 4.17;
-    }
-
-    /* Swiper main box */
-    .swiper-main {
-      max-width: 100%;
-      width: 446px;
-      height: auto;
-      position: relative;
-      
-      overflow: hidden;
-    }
-
-    .swiper-container {
-      max-width: 100%;
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      top: 8%;
-      box-sizing: border-box;
-    }
-
-    /* Fade Overlay */
-    .fade-overlay {
-      position: absolute;
-      inset: 0;
-      background-image: url(../images/culture-image/fadeimg.png);
-      background-size: 100% 100%;
-      /* pointer-events: none; */
-      z-index: 2;
-    }
 
     /* Slide content */
     .swiper-slide {
@@ -440,7 +363,6 @@ padding-left: 5.17%;
             font-weight: 400;
             font-style: Regular;
             font-size: 32px;
-            leading-trim: NONE;
             line-height: 112.00000000000001%;
             letter-spacing: 0%;
                 padding-top: 15%;
@@ -453,7 +375,6 @@ padding-left: 5.17%;
                 font-weight: 700;
                 font-style: Bold;
                 font-size: 42px;
-                leading-trim: NONE;
                 line-height: 112.00000000000001%;
                 letter-spacing: 0%;
               color: #0C72BA;
@@ -510,7 +431,6 @@ padding-left: 5.17%;
             font-weight: 500;
             font-style: Medium;
             font-size: 22px;
-            leading-trim: NONE;
             line-height: 100%;
             letter-spacing: 0%;
          color: #FFFFFF;
@@ -523,7 +443,6 @@ padding-left: 5.17%;
             font-weight: 500;
             font-style: Medium;
             font-size: 22px;
-            leading-trim: NONE;
             line-height: 100%;
             letter-spacing: 0%;
          color: #FFFFFF;
@@ -563,61 +482,3 @@ padding-left: 5.17%;
     }
     
 }
- 
-    /* Mobile */
-   
-        .CAceo-bg{
-        background-image: url(../images/culture-image/culture-bg-img.png);
-        background-size: 100% 100%;
-        height: auto;
-        }
-          .ceo-bg-img{
-            background-image: url(../images/culture-image/ceo-bg-image.png);
-            background-size: 140% 100%;
-            background-position: center !important;
-            height: 580px;
-          }
-
-          .ceo-text h2{
-            font-family: Montserrat;
-          font-weight: 900;
-          font-style: Black;
-          font-size: 42px;
-          
-          line-height: 1.2;
-          color: #0A71B9;
-
-          }
-          .ceo-text p{
-            font-family: Montserrat;
-        font-weight: 500;
-        font-style: Medium;
-        font-size: 22px !important;
-        leading-trim: NONE;
-        line-height: 1.4;
-        letter-spacing: 0%;
-       margin-bottom: 0%;
-       color: #FFFFFF;
-        padding-right: 22%;
-        text-align: justify;
-          }
-        .culture-attribute-bg-img{
-          background-image: url(../images/culture-image/people-dancing-folk-full-shot.png);
-          width: 882px;
-      
-        height: 665px;
-
-        }
-        .fade-cluture-image{
-         
-     margin-top: 20px;
-     margin-right: 14px;
-
-        }
-        .fade-cluture-image img{
-          width: 205px;
-      height: 665px;
-      padding-bottom: 5%;
-
-        }
-
